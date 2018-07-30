@@ -6,9 +6,6 @@ O desafio é servir a cerveja sempre gelada! Você sabia que existem vários est
 
 Sabia que cada estilo tem uma temperatura ideal de consumo? Isso mesmo, em uma temperatura ideal sua breja fica mais saborosa :open_mouth:! 
 
-Para nos ajudar a criar nossa máquina cervejeira, desenvolva uma **api Restful** na qual se posibilite informar qual a **menor** temperatura possível para a cerveja escolhida pelo consumidor respeitando a tabela de temperaturas abaixo:
-
-
 |Estilo|Temperatura Ideal para consumo|
 |:---:|:---:|
 |Weissbier|-1° a 3°|
@@ -22,18 +19,44 @@ Para nos ajudar a criar nossa máquina cervejeira, desenvolva uma **api Restful*
 |Brown ale|0° a 14°|
 
 
-Também é importante a **api** ter um C.R.U.D de cervejas(lembrando que Skol e Itaipava são do estilo Pilsen ou seja existem várias cerveja pra o mesmo estilo).
+## Tarefas
 
-#### O que esperamos?
+### 1. Crie um microserviço para os estilos de cerveja
 
-- Utilize uma linguagem orientada o objetos (preferência para Java :smile:)
-- Aproveite para mostrar seus conhecimentos em orientação a objetos e aplicar as boas práticas de desenvolvimento :wink:.
-- Utilize o framework de sua preferência.
-- Salve os dados em algum banco.
-- Testes :smile:
-- Ao final compartilhe sua solução com a gente.
-- Estamos aqui para tirar dúvidas.
+Precisamos que crie uma api que possamos listar, cadastrar, deletar e atualizar nossos estilos de cerveja e suas temperaturas(C.R.U.D).
 
+
+### 2. Crie um endpoint para retornar a menor temperatura possível dado o estilo da cerveja
+
+Para nos ajudar a criar nossa máquina cervejeira, desenvolva uma **api Restful** na qual se posibilite informar qual a **menor** temperatura possível para a cerveja escolhida pelo consumidor respeitando os estilos cadastrados.
+
+Exemplo:
+
+**Entrada:**
+{
+"beerStyle": "IPA"
+}
+
+**Saída**
+{
+  -7°
+}
+
+### 3. O que esperamos:
+
+* Seu projeto deve ser **multi-plataforma**.
+* Crie uma documentação e explique como como rodar localmente e também como realizar o deploy.
+* Quanto mais simples for para realizar o deploy, melhor!
+* Sinta-se a vontade para usar qualquer framework e ferramentas que se sentir a vontade a única restrição é a linguagem de programação que deve ser **Java**
+
+## O que iremos avaliar
+
+Nosso time irá avaliar:
+- **Desempenho**
+- **Testes**
+- **Manutenabilidade**
+- **Separação de responsabilidades**
+- **Engenharia de software**
 
 Seu código diz muito sobre você, então relaxa, o que queremos é te conhecer melhor através de seu código :wink:.
 
