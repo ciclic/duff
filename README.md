@@ -6,6 +6,7 @@ O desafio é servir a cerveja sempre gelada! Você sabia que existem vários est
 
 Sabia que cada estilo tem uma temperatura ideal de consumo? Isso mesmo, em uma temperatura ideal sua breja fica mais saborosa :open_mouth:! 
 
+**Exemplo:**
 |Estilo|Temperatura Ideal para consumo|
 |:---:|:---:|
 |Weissbier|-1° a 3°|
@@ -26,21 +27,47 @@ Sabia que cada estilo tem uma temperatura ideal de consumo? Isso mesmo, em uma t
 Precisamos que crie uma api que possamos listar, cadastrar, deletar e atualizar nossos estilos de cerveja e suas temperaturas(C.R.U.D).
 
 
-### 2. Crie um endpoint para retornar a menor temperatura possível dado o estilo da cerveja
+### 2. Criar um endpoint
 
-Para nos ajudar a criar nossa máquina cervejeira, desenvolva uma **api Restful** na qual se posibilite informar qual a **menor** temperatura possível para a cerveja escolhida pelo consumidor respeitando os estilos cadastrados.
+Para nos ajudar a criar nossa máquina cervejeira, desenvolva uma **api Restful** na qual dada uma temperatura ela nos devolva o estilo de cerveja adequado e uma playlist que contenha uma das palavras do nome do estilo de cerveja(use a api do [spotify](https://developer.spotify.com/documentation/web-api/) para buscar as playlist). 
+
+**Regras de negócio** 
+
+* Todo estilo de cerveja tem uma temperatura mínima e uma temperatura máxima.
+* Para achar o estilo de cerveja adequado é feita  a média da temperatura máxima e mínima e ver qual média mais se aproxima da temperatura dada.
+* Caso o resultado seja mais de um estilo de cerveja devolver o estilo por ordem alfabética(entre Pilsens e IPA voltára IPA) caso de empate na primeira letra ordernar pela segunda e assim por diante.
+* Caso não tenha uma playlist que contenha o nome do estilo retornar um HTTP Status que achar mais adequado.
+* A lista dada foi um exemplo, a api tem que estar pronta para receber mais estilos e mais temperaturas.
+
 
 Exemplo:
 
 **Entrada:**
 {
-"beerStyle": "IPA"
+"temperature" : -7°
 }
 
 **Saída**
 {
-  -7°
+	"beerStyle": "IPA"
+  "playlist":{	
+  "name":"IPARTY",
+  "tracks": [{
+			"name": "Lua de Cristal",
+			"artist": "Xuxa",
+			"link": "https: //open.spotify.com/artist/21451j1KhjAiaYKflxBjr1"
+		},
+		{
+			"name": "Vogue",
+			"artist": "Madonna",
+			"link": "https: //open.spotify.com/artist/21451j1Khj123YKflxBjr1"
+		}
+	]
+  }
 }
+
+
+
 
 ### 3. O que esperamos:
 
