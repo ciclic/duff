@@ -31,14 +31,14 @@ Precisamos que crie uma api que possamos listar, cadastrar, deletar e atualizar 
 
 ### 2. Criar um endpoint
 
-Para nos ajudar a criar nossa máquina cervejeira, desenvolva uma **api Restful** na qual dada uma temperatura ela nos devolva o estilo de cerveja adequado e uma playlist que contenha o nome desse estilo(use a api do [spotify](https://developer.spotify.com/documentation/web-api/) para buscar as playlist). 
+Para nos ajudar a criar nossa máquina cervejeira, desenvolva uma **api Restful** na qual, dada uma temperatura, ela nos devolva o estilo de cerveja adequado e uma playlist que contenha o nome desse estilo(use a api do [spotify](https://developer.spotify.com/documentation/web-api/) para buscar as playlist). 
 
 **Regras de negócio** 
 
 * Todo estilo de cerveja tem uma temperatura mínima e uma temperatura máxima.
-* Para achar o estilo de cerveja adequado é feita  a média da temperatura máxima e mínima e ver qual média mais se aproxima da temperatura dada.
-* Caso o resultado seja mais de um estilo de cerveja devolver o estilo por ordem alfabética(entre Pilsens e IPA voltára IPA) caso de empate na primeira letra ordernar pela segunda e assim por diante.
-* Caso não tenha uma playlist que contenha o nome do estilo retornar um HTTP Status que achar mais adequado.
+* Para selecionar o estilo de cerveja adequado, é feita a média da temperatura máxima e mínima e ver qual valor mais se aproxima da temperatura dada.
+* Caso o resultado seja mais de um estilo de cerveja, devolver o estilo por ordem alfabética(entre Pilsens e IPA voltára IPA) e caso de empate na primeira letra, ordernar pela segunda e assim por diante.
+* Caso não tenha uma playlist que contenha o nome do estilo, retornar um HTTP Status que achar mais adequado.
 * A lista dada foi um exemplo, a api tem que estar pronta para receber mais estilos e mais temperaturas.
 
 
