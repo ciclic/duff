@@ -7,6 +7,8 @@ O desafio é servir a cerveja sempre gelada! Você sabia que existem vários est
 Sabia que cada estilo tem uma temperatura ideal de consumo? Isso mesmo, em uma temperatura ideal sua breja fica mais saborosa :open_mouth:! 
 
 **Exemplo:**
+
+
 |Estilo|Temperatura Ideal para consumo|
 |:---:|:---:|
 |Weissbier|-1° a 3°|
