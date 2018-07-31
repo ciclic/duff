@@ -43,13 +43,15 @@ Para nos ajudar a criar nossa máquina cervejeira, desenvolva uma **api Restful*
 Exemplo:
 
 **Entrada:**
+```json
 {
-"temperature" : -7°
+"temperature" : -7
 }
-
+```
 **Saída**
+```json
 {
-	"beerStyle": "IPA"
+  "beerStyle": "IPA",
   "playlist":{	
   "name":"IPARTY",
   "tracks": [{
@@ -65,7 +67,7 @@ Exemplo:
 	]
   }
 }
-
+```
 
 
 
