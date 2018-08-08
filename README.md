@@ -31,7 +31,7 @@ Precisamos que crie uma api que possamos listar, cadastrar, deletar e atualizar 
 
 ### 2. Criar um endpoint
 
-Para nos ajudar a criar nossa máquina cervejeira, desenvolva uma **api Restful** na qual, dada uma temperatura, ela nos devolva o estilo de cerveja adequado e uma playlist que contenha o nome desse estilo(use a api do [spotify](https://developer.spotify.com/documentation/web-api/) para buscar as playlist). 
+Para nos ajudar a criar nossa máquina cervejeira, desenvolva uma **api Restful** na qual, dada uma temperatura, ela nos devolva o estilo de cerveja mais adequado para aquela temperatura e uma playlist que contenha o nome desse estilo(use a api do [spotify](https://developer.spotify.com/documentation/web-api/) para buscar as playlist). 
 
 **Regras de negócio** 
 
