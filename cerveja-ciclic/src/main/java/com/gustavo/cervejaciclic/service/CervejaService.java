@@ -1,28 +1,29 @@
-package com.gustavo.cervejaciclic;
+package com.gustavo.cervejaciclic.service;
 
 import com.gustavo.cervejaciclic.model.Cerveja;
+import com.gustavo.cervejaciclic.repository.CervejaRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.Comparator;
 import java.util.List;
 
-public class ListaDeCervejas {
+@Service
+public class CervejaService {
 
-    List<Cerveja> cervejas;
+    @Autowired
+    private final CervejaRepository repository;
 
-    public ListaDeCervejas(List<Cerveja> cervejas) {
-        this.cervejas = cervejas;
-    }
-
-
-    public List<Cerveja> getCervejas() {
-        return cervejas;
+    public CervejaService(CervejaRepository repository) {
+        this.repository = repository;
     }
 
 
     public String escolheAMelhorCerveja(int temperaturaDesejada) {
-        List<Cerveja> listaDasCervejas = new ArrayList<>();
+        List<Cerveja> cervejas = repository.findAll();
 
+        List<Cerveja> listaDasCervejas = new ArrayList<>();
         for(int i = 0; i < cervejas.size() -1; i++){
             int media = (cervejas.get(i).getMinima() + cervejas.get(i).getMaxima()) / 2;
             int diferenca =  pegaDiferença(temperaturaDesejada, negativoPositivo(media) );
@@ -33,7 +34,6 @@ public class ListaDeCervejas {
         }
 
         listaDasCervejas.sort(Comparator.comparing(Cerveja::getEstilo));
-
         return listaDasCervejas.get(0).getEstilo();
     }
 
@@ -46,5 +46,4 @@ public class ListaDeCervejas {
     public int negativoPositivo(int valor) {
         return valor*-1;
     }
-
 }
