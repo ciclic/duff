@@ -1,12 +1,24 @@
 package com.gustavo.cervejaciclic;
 
+import org.junit.Before;
 import org.junit.Test;
 
 import java.util.Arrays;
 
 import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
 
 public class CervejaTest {
+
+    private ListaDeCervejas lista;
+
+    @Before
+    public void init(){
+        lista = new ListaDeCervejas(Arrays.asList(new Cerveja("Dunkel", -8, 2),
+                new Cerveja("Weissbier", -5, 6),
+                new Cerveja("A boa", -7, 2)
+                ));
+    }
 
 
     @Test
@@ -24,37 +36,41 @@ public class CervejaTest {
 
     @Test
     public void deveRetornarUmaListaDeCervejas(){
-        ListaDeCervejas lista = new ListaDeCervejas(Arrays.asList(new Cerveja("Dunkel", -8, 2), new Cerveja("Weissbier", -5, 6)));
-        assertEquals(2, lista.getCervejas().size());
+        assertEquals(3, lista.getCervejas().size());
     }
 
     @Test
     public void deveDevolverAMediaDaTemeraturaDaCervejaDunkel(){
-        ListaDeCervejas lista = new ListaDeCervejas(Arrays.asList( new Cerveja("Weissbier", -5, 6), new Cerveja("Dunkel", -8, 2)));
-
         assertEquals("Dunkel", lista.getCervejasPorMediaDeTemperatura(-2) );
     }
 
     @Test
     public void deveDevolverUmNuneroNegativoParaPositivo(){
-        ListaDeCervejas lista = new ListaDeCervejas(Arrays.asList( new Cerveja("Weissbier", -5, 6), new Cerveja("Dunkel", -8, 2)));
-
         int valor = lista.inverterNumeroPositivoParaNegativoOuPositivo(-3);
-
         assertEquals(3, valor);
     }
 
     @Test
     public void deveDevolverUmNuneroPositivoParaNegativo(){
-        ListaDeCervejas lista = new ListaDeCervejas(Arrays.asList( new Cerveja("Weissbier", -5, 6), new Cerveja("Dunkel", -8, 2)));
-
         int valor = lista.inverterNumeroPositivoParaNegativoOuPositivo(3);
 
         assertEquals(-3, valor);
     }
 
     @Test
-    public void
+    public void verificarSeATemperaturaEIgualAUmValor(){
+        assertEquals("A boa", lista.verificaTemperaturaIgual(-2));
+    }
+
+    @Test
+    public void devePegarACervejaComOValorMaisProximo(){
+        ListaDeCervejas lista = new ListaDeCervejas(Arrays.asList(new Cerveja("Dunkel", -8, 2),
+                new Cerveja("Weissbier", -5, 6)));
+
+        assertEquals("Dunkel", lista.verificaTemperaturaIgual(-2));
+
+
+    }
 
 
 }
