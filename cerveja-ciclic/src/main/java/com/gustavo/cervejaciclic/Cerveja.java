@@ -1,5 +1,7 @@
 package com.gustavo.cervejaciclic;
 
+import java.util.Objects;
+
 public class Cerveja {
     private final String estilo;
     private final Integer minima;
@@ -11,6 +13,11 @@ public class Cerveja {
         this.maxima = maxima;
     }
 
+
+    public String getEstilo() {
+        return estilo;
+    }
+
     public Integer getMinima() {
         return minima;
     }
@@ -19,7 +26,16 @@ public class Cerveja {
         return maxima;
     }
 
-    public String getEstilo() {
-        return estilo;
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Cerveja cerveja = (Cerveja) o;
+        return Objects.equals(estilo, cerveja.estilo);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(estilo);
     }
 }
