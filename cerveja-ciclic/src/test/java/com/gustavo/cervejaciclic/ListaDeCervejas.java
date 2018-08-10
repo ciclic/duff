@@ -19,10 +19,6 @@ public class ListaDeCervejas {
     }
 
 
-    public int negativoPositivo(int valor) {
-        return valor*-1;
-    }
-
     public String escolheAMelhorCerveja(int temperaturaDesejada) {
         List<Cerveja> listaDasCervejas = new ArrayList<>();
 
@@ -30,12 +26,9 @@ public class ListaDeCervejas {
             int media = (cervejas.get(i).getMinima() + cervejas.get(i).getMaxima()) / 2;
             int diferenca =  pegaDiferença(temperaturaDesejada, negativoPositivo(media) );
 
-            if(diferenca == 0){
-                listaDasCervejas.add(cervejas.get(i));
-            }else if(diferenca == 1){
+            if(diferenca <= 1){
                 listaDasCervejas.add(cervejas.get(i));
             }
-
         }
 
         listaDasCervejas.sort(Comparator.comparing(Cerveja::getEstilo));
@@ -48,4 +41,9 @@ public class ListaDeCervejas {
             return negativoPositivo(temperaturaDesejada);
         return temperaturaDesejada +  media;
     }
+
+    public int negativoPositivo(int valor) {
+        return valor*-1;
+    }
+
 }
