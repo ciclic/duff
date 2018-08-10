@@ -14,11 +14,20 @@ public class CervejaTest {
 
     @Before
     public void init(){
-        lista = new ListaDeCervejas(Arrays.asList(new Cerveja("Dunkel", -8, 2),
-                new Cerveja("Weissbier", -5, 6),
-                new Cerveja("A boa", -7, 2)
+        lista = new ListaDeCervejas(Arrays.asList(
+                new Cerveja("Weissbier", -1, 3),
+                new Cerveja("Pilsens"	,-2 , 4),
+                new Cerveja("Weizenbier",	-4, 6),
+                new Cerveja("Red ale"	,-5, 5),
+                new Cerveja("India pale ale",	-6, 7),
+                new Cerveja("IPA"	,-7, 10),
+                new Cerveja("Dunkel",	-8 , 2),
+                new Cerveja("Imperial Stouts",	-10, 13),
+                new Cerveja("Brown ale",0,14)
                 ));
     }
+
+
 
 
     @Test
@@ -68,8 +77,6 @@ public class CervejaTest {
                 new Cerveja("Weissbier", -5, 6)));
 
         assertEquals("Dunkel", lista.verificaTemperaturaIgual(-2));
-
-
     }
 
 
