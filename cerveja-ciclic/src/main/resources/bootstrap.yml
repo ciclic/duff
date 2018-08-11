@@ -1,0 +1,9 @@
+spring:
+  profiles:
+    active: default
+  application:
+    name: cerveja-ciclic
+  cloud:
+    config:
+      uri: http://localhost:8787
+
