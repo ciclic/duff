@@ -2,18 +2,22 @@ package com.gustavo.cervejaciclic;
 
 import com.gustavo.cervejaciclic.model.Cerveja;
 import com.gustavo.cervejaciclic.repository.CervejaRepository;
+import com.wrapper.spotify.SpotifyApi;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.stereotype.Component;
 
+import java.net.URI;
+import java.net.URISyntaxException;
+
 @SpringBootApplication
 public class CervejaCiclicApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(CervejaCiclicApplication.class, args);
-	}
+    }
 }
 
 
