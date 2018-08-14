@@ -5,7 +5,7 @@ import lombok.Data;
 import java.util.List;
 
 @Data
-public class MyPlaylist {
+public class Playlist {
     private String name;
-    private List<MyTrack> tracks;
+    private List<Track> tracks;
 }

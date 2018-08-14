@@ -29,10 +29,12 @@ public class Cerveja {
 
     private String playlistId;
 
-    public Cerveja(@NotNull String estilo, @NotNull Integer minima, @NotNull Integer maxima) {
+    public Cerveja(@NotNull String estilo, @NotNull Integer minima, @NotNull Integer maxima, String userId, String playlistId) {
         this.estilo = estilo;
         this.minima = minima;
         this.maxima = maxima;
+        this.userId = userId;
+        this.playlistId = playlistId;
     }
 
     @Override

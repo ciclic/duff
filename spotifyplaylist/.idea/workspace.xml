@@ -2,17 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a529ec9e-5ef8-40d0-af5e-eac62dde7479" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cerveja-ciclic.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../cerveja-ciclic.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../configserver/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../configserver/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../configserver/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../configserver/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../configserver/settings.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../configserver/settings.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../duff_man.png" beforeDir="false" afterPath="$PROJECT_DIR$/../duff_man.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../eureka-naming-server.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../eureka-naming-server.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../spotifyplaylist.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../spotifyplaylist.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/spotifyplaylist_main.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/spotifyplaylist_main.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules/spotifyplaylist_test.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules/spotifyplaylist_test.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/model/PlaylistConversion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/model/Track.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/proxy/SpotifyPlaylistProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cerveja-ciclic/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../cerveja-ciclic/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/CervejaCiclicApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/CervejaCiclicApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/model/Cerveja.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/model/Cerveja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/resource/CervejaResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/resource/CervejaResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/MyPlaylist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/MyTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Track.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/resource/PlaylistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/resource/PlaylistResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/service/GetAPlayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/service/GetAPlayList.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -84,7 +85,7 @@
         <counts>
           <entry key="gradle" value="5" />
           <entry key="gradlew" value="1" />
-          <entry key="java" value="32" />
+          <entry key="java" value="34" />
           <entry key="properties" value="1" />
           <entry key="yml" value="4" />
         </counts>
@@ -92,7 +93,7 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Groovy" value="5" />
-          <entry key="JAVA" value="32" />
+          <entry key="JAVA" value="34" />
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="Properties" value="1" />
           <entry key="YAML" value="4" />
@@ -101,7 +102,7 @@
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="gradle" value="23" />
-          <entry key="java" value="1077" />
+          <entry key="java" value="1115" />
           <entry key="properties" value="1" />
           <entry key="yml" value="19" />
         </counts>
@@ -109,7 +110,7 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="Groovy" value="23" />
-          <entry key="JAVA" value="1077" />
+          <entry key="JAVA" value="1115" />
           <entry key="Properties" value="1" />
           <entry key="YAML" value="19" />
         </counts>
@@ -118,11 +119,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/build.gradle">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+            <state relative-caret-position="446">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/SpotifyplaylistApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
@@ -132,11 +142,20 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/MyTrack.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Track.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state relative-caret-position="270">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Playlist.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -518,18 +537,20 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/swaggerconfig/SwaggerConfig.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/SpotifyplaylistApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/GetAPlayList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/MyPlaylist.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/MyTrack.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/ClientCredentialsExample.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/MyPlaylist.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/MyTrack.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/service/GetAPlayList.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/resource/PlaylistResource.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/service/ClientCredentialsExample.java" />
         <option value="$PROJECT_DIR$/src/main/resources/bootstrap.yml" />
         <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/SpotifyplaylistApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/MyTrack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Track.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/MyPlaylist.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Playlist.java" />
       </list>
     </option>
   </component>
@@ -584,6 +605,15 @@
               <item name="spotifyplaylist" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="spotifyplaylist" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spotifyplaylist" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spotifyplaylist" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -594,7 +624,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534259993813" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534261107396" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
@@ -657,10 +687,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="531" y="335" width="656" height="784" extended-state="0" />
+    <frame x="0" y="28" width="1680" height="1052" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.69344264" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25887394" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -669,13 +699,13 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32864866" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22017354" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.4648318" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4648318" />
       <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
       <window_info anchor="bottom" id="Build" order="10" weight="0.19522777" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.329718" />
@@ -737,13 +767,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/swaggerconfig/SwaggerConfig.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/SpotifyplaylistApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="70" selection-start-line="10" selection-start-column="70" selection-end-line="10" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/se.michaelthelin.spotify/spotify-web-api-java/2.0.4/f0b1889cfdf7c48202a76aa9b50363aafc627bae/spotify-web-api-java-2.0.4-sources.jar!/com/wrapper/spotify/requests/data/playlists/GetPlaylistRequest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="188">
@@ -762,7 +785,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/MyPlaylist.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/service/GetAPlayList.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/service/ClientCredentialsExample.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/resource/PlaylistResource.java" />
@@ -772,20 +794,34 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap.yml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/MyTrack.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="5" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/gradlew">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="27" column="5" lean-forward="true" selection-start-line="27" selection-start-column="5" selection-end-line="27" selection-end-column="5" />
+        <state relative-caret-position="446">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/SpotifyplaylistApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Playlist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Track.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
         </state>
       </provider>
     </entry>
