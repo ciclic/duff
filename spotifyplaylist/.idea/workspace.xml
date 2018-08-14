@@ -1,0 +1,829 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="a529ec9e-5ef8-40d0-af5e-eac62dde7479" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/model/PlaylistConversion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/model/Track.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/proxy/SpotifyPlaylistProxy.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cerveja-ciclic/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../cerveja-ciclic/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/CervejaCiclicApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/CervejaCiclicApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/model/Cerveja.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/model/Cerveja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/resource/CervejaResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/resource/CervejaResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/MyPlaylist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Playlist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/MyTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Track.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/resource/PlaylistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/resource/PlaylistResource.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/service/GetAPlayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/service/GetAPlayList.java" afterDir="false" />
+    </list>
+    <ignored path="$PROJECT_DIR$/.gradle/" />
+    <ignored path="$PROJECT_DIR$/build/" />
+    <ignored path="$PROJECT_DIR$/out/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spotifyplaylist" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spotifyplaylist" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spotifyplaylist" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="main" type="396b929e:GradleViewContributor$SourceSetNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spotifyplaylist" type="f1a62948:ProjectNode" />
+                <item name="Source Sets" type="e897c970:GradleViewContributor$SourceSetsNode" />
+                <item name="main" type="396b929e:GradleViewContributor$SourceSetNode" />
+                <item name="Dependencies" type="6de06a37:ExternalSystemViewDefaultContributor$MyDependenciesNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="spotifyplaylist" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="1898768516">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.1" value="4" />
+          <entry key="project.opened" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="gradle" value="5" />
+          <entry key="gradlew" value="1" />
+          <entry key="java" value="34" />
+          <entry key="properties" value="1" />
+          <entry key="yml" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Groovy" value="5" />
+          <entry key="JAVA" value="34" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Properties" value="1" />
+          <entry key="YAML" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="gradle" value="23" />
+          <entry key="java" value="1115" />
+          <entry key="properties" value="1" />
+          <entry key="yml" value="19" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Groovy" value="23" />
+          <entry key="JAVA" value="1115" />
+          <entry key="Properties" value="1" />
+          <entry key="YAML" value="19" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="446">
+              <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/SpotifyplaylistApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap.yml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Track.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Playlist.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gradlew">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="myGradleHomes">
+      <map>
+        <entry key="$PROJECT_DIR$" value="/opt/gradle" />
+      </map>
+    </option>
+    <option name="myGradleVersions">
+      <map>
+        <entry key="$PROJECT_DIR$" value="4.9" />
+      </map>
+    </option>
+    <option name="availableProjects">
+      <map>
+        <entry>
+          <key>
+            <ExternalProjectPojo>
+              <option name="name" value="spotifyplaylist" />
+              <option name="path" value="$PROJECT_DIR$" />
+            </ExternalProjectPojo>
+          </key>
+          <value>
+            <list>
+              <ExternalProjectPojo>
+                <option name="name" value="spotifyplaylist" />
+                <option name="path" value="$PROJECT_DIR$" />
+              </ExternalProjectPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="availableTasks">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <list>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the components produced by root project 'spotifyplaylist'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="components" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects that depend on it." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildDependents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="cleanEclipseClasspath" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the sub-projects of root project 'spotifyplaylist'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="projects" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Cleans all Eclipse files." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="cleanEclipse" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="classes" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependent components of components in root project 'spotifyplaylist'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependentComponents" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all buildscript dependencies declared in root project 'spotifyplaylist'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildEnvironment" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="cleanEclipseProject" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Gradle wrapper files." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="wrapper" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles test classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="testClasses" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates Javadoc API documentation for the main source code." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="javadoc" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles an executable jar archive containing the main classes and their dependencies." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="bootJar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates the Eclipse classpath file." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="eclipseClasspath" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles a jar archive containing the main classes." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="jar" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the configuration model of root project 'spotifyplaylist'. [incubating]" />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="model" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes main resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the tasks runnable from root project 'spotifyplaylist'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="tasks" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="cleanEclipseJdt" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Initializes a new Gradle build." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="init" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs the unit tests." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="test" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the dependency management declared in root project 'spotifyplaylist'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencyManagement" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs this project as a Spring Boot application." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="bootRun" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles main Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the insight into a specific dependency in root project 'spotifyplaylist'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencyInsight" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Runs all checks." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="check" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles the outputs of this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="assemble" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Deletes the build directory." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="clean" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Compiles test Java source." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="compileTestJava" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays all dependencies declared in root project 'spotifyplaylist'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="dependencies" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates all Eclipse files." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="eclipse" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Processes test resources." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="processTestResources" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays a help message." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="help" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates the Eclipse JDT settings file." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="eclipseJdt" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="build" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Assembles and tests this project and all projects it depends on." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="buildNeeded" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Generates the Eclipse project file." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="eclipseProject" />
+              </ExternalTaskPojo>
+              <ExternalTaskPojo>
+                <option name="description" value="Displays the properties of root project 'spotifyplaylist'." />
+                <option name="linkedExternalProjectPath" value="$PROJECT_DIR$" />
+                <option name="name" value="properties" />
+              </ExternalTaskPojo>
+            </list>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="modificationStamps">
+      <map>
+        <entry key="$PROJECT_DIR$" value="4602783742000" />
+        <entry key="$PROJECT_DIR$/.gradle" value="0" />
+        <entry key="$PROJECT_DIR$/build.gradle" value="815453599" />
+        <entry key="$PROJECT_DIR$/settings.gradle" value="2589243347" />
+      </map>
+    </option>
+    <option name="projectBuildClasspath">
+      <map>
+        <entry key="$PROJECT_DIR$">
+          <value>
+            <ExternalProjectBuildClasspathPojo>
+              <option name="modulesBuildClasspath">
+                <map>
+                  <entry key="$PROJECT_DIR$">
+                    <value>
+                      <ExternalModuleBuildClasspathPojo>
+                        <option name="entries">
+                          <list>
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-gradle-plugin/2.0.4.RELEASE/b18a052691327096ba583b11d5fc052123500db3/spring-boot-gradle-plugin-2.0.4.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework.boot/spring-boot-loader-tools/2.0.4.RELEASE/24a1d9eac0090e12d20678cfbf7299d81d63ea7/spring-boot-loader-tools-2.0.4.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.spring.gradle/dependency-management-plugin/1.0.6.RELEASE/c7118365d75bca698892b5df1e683b8d6d6b87bb/dependency-management-plugin-1.0.6.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-core/5.0.8.RELEASE/dc39c49e3246cdf73d3786ac41119140aed3fa08/spring-core-5.0.8.RELEASE.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.apache.commons/commons-compress/1.14/7b18320d668ab080758bf5383d6d8fcf750babce/commons-compress-1.14.jar" />
+                            <option value="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.springframework/spring-jcl/5.0.8.RELEASE/a1fa8fb560fb252321776e16bc9ac8201af4ef5e/spring-jcl-5.0.8.RELEASE.jar" />
+                          </list>
+                        </option>
+                        <option name="path" value="$PROJECT_DIR$" />
+                      </ExternalModuleBuildClasspathPojo>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+              <option name="name" value="spotifyplaylist" />
+              <option name="projectBuildClasspath">
+                <list>
+                  <option value="/opt/gradle/lib/gradle-runtime-api-info-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-core-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-kotlin-dsl-provider-plugins-0.18.4.jar" />
+                  <option value="/opt/gradle/lib/gradle-docs-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-model-core-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-logging-4.9.jar" />
+                  <option value="/opt/gradle/lib/groovy-all-2.4.12.jar" />
+                  <option value="/opt/gradle/lib/gradle-kotlin-dsl-tooling-models-0.18.4.jar" />
+                  <option value="/opt/gradle/lib/gradle-core-api-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-installation-beacon-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-kotlin-dsl-tooling-builders-0.18.4.jar" />
+                  <option value="/opt/gradle/lib/gradle-tooling-api-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-native-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-cli-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-kotlin-dsl-0.18.4.jar" />
+                  <option value="/opt/gradle/lib/gradle-resources-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-messaging-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-process-services-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-base-services-groovy-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-model-groovy-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-jvm-services-4.9.jar" />
+                  <option value="/opt/gradle/lib/ant-launcher-1.9.11.jar" />
+                  <option value="/opt/gradle/lib/ant-1.9.11.jar" />
+                  <option value="/opt/gradle/lib/gradle-launcher-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-wrapper-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-persistent-cache-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-build-option-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-base-services-4.9.jar" />
+                  <option value="/opt/gradle/lib/gradle-build-cache-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-version-control-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-resources-s3-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-build-cache-http-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-language-groovy-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-osgi-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/ivy-2.2.0.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-language-java-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-ide-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-workers-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-language-native-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-maven-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-testing-native-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-language-scala-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-tooling-api-builders-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-plugins-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-plugin-development-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-resources-gcs-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-composite-builds-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-signing-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-ide-native-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-reporting-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-resources-sftp-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-platform-native-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-code-quality-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-dependency-management-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-antlr-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-language-jvm-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-platform-base-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-scala-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-announce-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-plugin-use-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-javascript-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-build-init-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-ivy-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-test-kit-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-testing-jvm-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-ear-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-testing-junit-platform-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-resources-http-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-jacoco-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-diagnostics-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-ide-play-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-testing-base-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-publish-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-platform-play-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-platform-jvm-4.9.jar" />
+                  <option value="/opt/gradle/lib/plugins/gradle-build-comparison-4.9.jar" />
+                </list>
+              </option>
+            </ExternalProjectBuildClasspathPojo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../cerveja-ciclic" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$" value="RE_IMPORT" />
+        <entry key="$PROJECT_DIR$/../../../gustavo/money-api" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/swaggerconfig/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/GetAPlayList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/MyPlaylist.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/MyTrack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/ClientCredentialsExample.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/service/GetAPlayList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/resource/PlaylistResource.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/service/ClientCredentialsExample.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/bootstrap.yml" />
+        <option value="$PROJECT_DIR$/build.gradle" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/SpotifyplaylistApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/MyTrack.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Track.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/MyPlaylist.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Playlist.java" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="y" value="28" />
+    <option name="width" value="1680" />
+    <option name="height" value="1052" />
+  </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="spotifyplaylist" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spotifyplaylist" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="spotifyplaylist" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spotifyplaylist" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spotifyplaylist" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spotifyplaylist" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+            </path>
+            <path>
+              <item name="spotifyplaylist" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spotifyplaylist" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spotifyplaylist" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spotifyplaylist" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="spotifyplaylist" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spotifyplaylist" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spotifyplaylist" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="spotifyplaylist" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spotifyplaylist" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spotifyplaylist" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="AndroidView" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534261107396" />
+    <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist" />
+      <recent name="$PROJECT_DIR$/src/main/resources" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.gustavo.spotifyplaylist.swaggerconfig" />
+    </key>
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.gustavo.spotifyplaylist" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="SpotifyplaylistApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.gustavo.spotifyplaylist.SpotifyplaylistApplication" />
+      <module name="spotifyplaylist_main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.gustavo.spotifyplaylist.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.SpotifyplaylistApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="a529ec9e-5ef8-40d0-af5e-eac62dde7479" name="Default Changelist" comment="" />
+      <created>1534244585258</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1534244585258</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="28" width="1680" height="1052" extended-state="6" />
+    <editor active="true" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25887394" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Designer" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.22017354" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3991323" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.4648318" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Build" order="10" weight="0.19522777" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.329718" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="right" id="Capture Analysis" order="4" />
+      <window_info anchor="right" id="Gradle" order="5" weight="0.32986537" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Maven Projects" order="8" />
+    </layout>
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/se.michaelthelin.spotify/spotify-web-api-java/2.0.4/f0b1889cfdf7c48202a76aa9b50363aafc627bae/spotify-web-api-java-2.0.4-sources.jar!/com/wrapper/spotify/SpotifyApi.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="1143" column="36" selection-start-line="1143" selection-start-column="36" selection-end-line="1143" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/se.michaelthelin.spotify/spotify-web-api-java/2.0.4/f0b1889cfdf7c48202a76aa9b50363aafc627bae/spotify-web-api-java-2.0.4-sources.jar!/com/wrapper/spotify/model_objects/specification/Playlist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="165" column="12" selection-start-line="165" selection-start-column="12" selection-end-line="165" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///opt/jdk1.8.0_181/src.zip!/java/lang/Boolean.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="42" column="19" selection-start-line="42" selection-start-column="19" selection-end-line="42" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/se.michaelthelin.spotify/spotify-web-api-java/2.0.4/f0b1889cfdf7c48202a76aa9b50363aafc627bae/spotify-web-api-java-2.0.4-sources.jar!/com/wrapper/spotify/model_objects/specification/ArtistSimplified.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/se.michaelthelin.spotify/spotify-web-api-java/2.0.4/f0b1889cfdf7c48202a76aa9b50363aafc627bae/spotify-web-api-java-2.0.4-sources.jar!/com/wrapper/spotify/model_objects/specification/Track.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="76" column="28" selection-start-line="76" selection-start-column="28" selection-end-line="76" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/se.michaelthelin.spotify/spotify-web-api-java/2.0.4/f0b1889cfdf7c48202a76aa9b50363aafc627bae/spotify-web-api-java-2.0.4-sources.jar!/com/wrapper/spotify/model_objects/specification/Paging.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/swaggerconfig/SwaggerConfig.java" />
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/se.michaelthelin.spotify/spotify-web-api-java/2.0.4/f0b1889cfdf7c48202a76aa9b50363aafc627bae/spotify-web-api-java-2.0.4-sources.jar!/com/wrapper/spotify/requests/data/playlists/GetPlaylistRequest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="188">
+          <caret line="88" column="19" selection-start-line="88" selection-start-column="19" selection-end-line="88" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/se.michaelthelin.spotify/spotify-web-api-java/2.0.4/f0b1889cfdf7c48202a76aa9b50363aafc627bae/spotify-web-api-java-2.0.4-sources.jar!/com/wrapper/spotify/model_objects/specification/PlaylistTrack.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="20" column="36" lean-forward="true" selection-start-line="20" selection-start-column="36" selection-end-line="20" selection-end-column="36" />
+          <folding>
+            <element signature="e#1818#1819#0" expanded="true" />
+            <element signature="e#1840#1841#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/service/GetAPlayList.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/service/ClientCredentialsExample.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/resource/PlaylistResource.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/bootstrap.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gradlew">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="446">
+          <caret line="48" lean-forward="true" selection-start-line="48" selection-end-line="48" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/SpotifyplaylistApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Playlist.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="9" column="20" selection-start-line="9" selection-start-column="20" selection-end-line="9" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Track.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" lean-forward="true" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>
