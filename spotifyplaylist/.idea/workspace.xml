@@ -2,18 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a529ec9e-5ef8-40d0-af5e-eac62dde7479" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/model/PlaylistConversion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/model/Track.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/proxy/SpotifyPlaylistProxy.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cerveja-ciclic/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/../cerveja-ciclic/build.gradle" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/resource/dto/CervejaResult.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/CervejaCiclicApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/CervejaCiclicApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/model/Cerveja.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/model/Cerveja.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/proxy/SpotifyPlaylistProxy.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/proxy/SpotifyPlaylistProxy.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/resource/CervejaResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/../cerveja-ciclic/src/main/java/com/gustavo/cervejaciclic/resource/CervejaResource.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/MyPlaylist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/MyTrack.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/model/Track.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/resource/PlaylistResource.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/resource/PlaylistResource.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/service/GetAPlayList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist/service/GetAPlayList.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -624,7 +617,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534261107396" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1534261852563" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/src/main/java/com/gustavo/spotifyplaylist" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.annotationProcessors" />

@@ -5,6 +5,7 @@ import com.gustavo.cervejaciclic.model.Cerveja;
 import com.gustavo.cervejaciclic.model.PlaylistConversion;
 import com.gustavo.cervejaciclic.proxy.SpotifyPlaylistProxy;
 import com.gustavo.cervejaciclic.repository.CervejaRepository;
+import com.gustavo.cervejaciclic.resource.dto.CervejaResult;
 import com.gustavo.cervejaciclic.service.CervejaService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -36,10 +37,10 @@ public class CervejaResource {
     }
 
     @GetMapping("/temperature/{value}")
-    public Cerveja getTheBestBeer(@PathVariable Integer value){
+    public CervejaResult getTheBestBeer(@PathVariable Integer value){
         Cerveja cerveja = service.escolheAMelhorCerveja(value);
         PlaylistConversion playlist = proxy.getPlayListValue(cerveja.getUserId(), cerveja.getPlaylistId());
-        return null ;
+        return new CervejaResult(cerveja.getEstilo(), playlist);
     }
 
     @GetMapping("/all")
