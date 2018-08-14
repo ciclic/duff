@@ -1,22 +1,2 @@
 server:
-  port: 8083
-
-spring:
-  h2: 
-    console:
-      enabled: true
-  jpa:
-    show-sql: true
-
-#eureka:
-#  instance:
-#    hostname: localhost
-#    port: 8588
-#    instanceId: ${spring.application.name}:${random.int}
-#  client:
-#    registerWithEureka: true
-#    fetchRegistry: true
-#    serviceUrl:
-#      defaultZone: http://${eureka.instance.hostname}:${eureka.instance.port}/eureka/
-#  server:
-#    wait-time-in-ms-when-sync-empty: 3000
+  port: 0

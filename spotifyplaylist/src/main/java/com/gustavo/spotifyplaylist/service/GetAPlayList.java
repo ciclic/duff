@@ -1,5 +1,7 @@
-package com.gustavo.spotifyplaylist;
+package com.gustavo.spotifyplaylist.service;
 
+import com.gustavo.spotifyplaylist.model.MyPlaylist;
+import com.gustavo.spotifyplaylist.model.MyTrack;
 import com.neovisionaries.i18n.CountryCode;
 import com.wrapper.spotify.SpotifyApi;
 import com.wrapper.spotify.exceptions.SpotifyWebApiException;
@@ -12,13 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class GetAPlayList {
-
-    //private static final String userId = "guuholi";
-    //private static final String playlistId = "2mN8oGJa8prWJBqQbXcPj8";
-
     private static final SpotifyApi spotifyApi = ClientCredentialsExample.clientCredentials_Sync();
-
-
 
     public static MyPlaylist getPlaylist_Sync(String userId, String playlistId) {
         MyPlaylist myPlaylist = new MyPlaylist();
