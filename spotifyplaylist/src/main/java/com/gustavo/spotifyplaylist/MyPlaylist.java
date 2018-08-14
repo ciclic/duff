@@ -6,8 +6,17 @@ public class MyPlaylist {
     private String name;
     private List<MyTrack> tracks;
 
-    public MyPlaylist(String name) {
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public List<MyTrack> getTracks() {
+        return tracks;
     }
 
     public void setTracks(List<MyTrack> tracks) {
@@ -21,4 +30,5 @@ public class MyPlaylist {
                 ", tracks:" + tracks +
                 '}';
     }
+
 }

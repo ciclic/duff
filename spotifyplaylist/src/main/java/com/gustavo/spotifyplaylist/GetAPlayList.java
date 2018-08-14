@@ -13,14 +13,15 @@ import java.util.List;
 
 public class GetAPlayList {
 
-    private static final String userId = "guuholi";
-    private static final String playlistId = "2mN8oGJa8prWJBqQbXcPj8";
+    //private static final String userId = "guuholi";
+    //private static final String playlistId = "2mN8oGJa8prWJBqQbXcPj8";
 
     private static final SpotifyApi spotifyApi = ClientCredentialsExample.clientCredentials_Sync();
 
 
 
-    public static void getPlaylist_Sync() {
+    public static MyPlaylist getPlaylist_Sync(String userId, String playlistId) {
+        MyPlaylist myPlaylist = new MyPlaylist();
         try {
 
             GetPlaylistRequest getPlaylistRequest = spotifyApi.getPlaylist(userId, playlistId)
@@ -28,7 +29,7 @@ public class GetAPlayList {
                     .build();
             final Playlist playlist = getPlaylistRequest.execute();
 
-            MyPlaylist myPlaylist = new MyPlaylist(playlist.getName());
+            myPlaylist.setName(playlist.getName());
             List<MyTrack> tracks = new ArrayList<>();
             for (PlaylistTrack item : playlist.getTracks().getItems()) {
 
@@ -38,11 +39,11 @@ public class GetAPlayList {
             }
 
             myPlaylist.setTracks(tracks);
-            System.out.println(myPlaylist.toString());
 
         } catch (IOException | SpotifyWebApiException e) {
             System.out.println("Error: " + e.getMessage());
         }
+        return  myPlaylist;
     }
 
 }

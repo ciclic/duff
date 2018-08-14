@@ -8,8 +8,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SpotifyplaylistApplication {
 
 	public static void main(String[] args) {
-		//SpringApplication.run(SpotifyplaylistApplication.class, args);
+		SpringApplication.run(SpotifyplaylistApplication.class, args);
 
-		GetAPlayList.getPlaylist_Sync();
+		//GetAPlayList.getPlaylist_Sync();
 	}
 }
