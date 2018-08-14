@@ -25,6 +25,10 @@ public class Cerveja {
     @NotNull
     private Integer maxima;
 
+    private String userId;
+
+    private String playlistId;
+
     public Cerveja(@NotNull String estilo, @NotNull Integer minima, @NotNull Integer maxima) {
         this.estilo = estilo;
         this.minima = minima;

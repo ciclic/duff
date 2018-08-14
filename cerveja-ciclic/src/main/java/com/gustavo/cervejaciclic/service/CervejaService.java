@@ -20,7 +20,7 @@ public class CervejaService {
     }
 
 
-    public String escolheAMelhorCerveja(int temperaturaDesejada) {
+    public Cerveja escolheAMelhorCerveja(int temperaturaDesejada) {
         List<Cerveja> cervejas = repository.findAll();
 
         List<Cerveja> listaDasCervejas = new ArrayList<>();
@@ -34,7 +34,7 @@ public class CervejaService {
         }
 
         listaDasCervejas.sort(Comparator.comparing(Cerveja::getEstilo));
-        return listaDasCervejas.get(0).getEstilo();
+        return listaDasCervejas.get(0);
     }
 
     private int pegaDiferença(int temperaturaDesejada,  int media) {

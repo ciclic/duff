@@ -31,7 +31,7 @@ public class CervejaResource {
     }
 
     @GetMapping("/temperature/{value}")
-    public String getTheBestBeer(@PathVariable Integer value){
+    public Cerveja getTheBestBeer(@PathVariable Integer value){
         return service.escolheAMelhorCerveja(value);
     }
 
