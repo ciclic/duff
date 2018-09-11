@@ -1,0 +1,8 @@
+spring:
+  profiles:
+    active: default
+  application:
+    name: zuul
+  cloud:
+    config:
+      uri: http://localhost:8787
