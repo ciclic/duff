@@ -8,6 +8,9 @@ import java.util.List;
 @Data
 public class PlaylistWrapper {
 
+    @JsonProperty("name")
+    private String playlistName;
+
     @JsonProperty("items")
     private List<Playlist> playlists;
 }

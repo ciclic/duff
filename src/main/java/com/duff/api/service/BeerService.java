@@ -5,6 +5,10 @@ import com.duff.api.exception.NotFoundException;
 import com.duff.api.repository.BeerRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.Comparator;
+import java.util.List;
+import java.util.Optional;
+
 @Service
 public class BeerService {
 
@@ -26,5 +30,26 @@ public class BeerService {
 
     public void removeBeer(String style) {
         beerRepository.deleteById(style);
+    }
+
+    public Beer getSuggestedBeer(double temperature) {
+        List<Beer> beers = beerRepository.findAllByMinTemperatureLessThanEqualAndMaxTemperatureGreaterThanEqual(temperature, temperature);
+
+        Comparator<Beer> beerComparator = (beer1, beer2) -> {
+            double b1Differnce = temperature - beer1.getAverage();
+            double b2Difference = temperature - beer2.getAverage();
+            if (Math.abs(b1Differnce) > Math.abs(b2Difference)) {
+                return 1;
+            } else if (Math.abs(b1Differnce) < Math.abs(b2Difference)) {
+                return -1;
+            } else {
+                return 0;
+            }
+        };
+        beerComparator.thenComparing(Beer::getStyle);
+
+        Optional<Beer> suggestedBeer = beers.stream().min(beerComparator);
+
+        return suggestedBeer.orElseThrow(NotFoundException::new);
     }
 }

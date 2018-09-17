@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import static org.springframework.http.HttpStatus.CREATED;
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 
-@RestController("/beer")
+@RestController
+@RequestMapping(value = "/beers")
 public class BeerController {
 
     private BeerService beerService;
@@ -58,4 +59,11 @@ public class BeerController {
         }
         return ResponseEntity.noContent().build();
     }
-}
+
+    @GetMapping("/suggested")
+    public ResponseEntity<Beer> suggestBeer(@RequestParam("temperature") double temperature) {
+        Beer suggestedBeer = beerService.getSuggestedBeer(temperature);
+
+        return ResponseEntity.ok(beerService.getSuggestedBeer(temperature));
+    }
+ }

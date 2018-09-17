@@ -11,6 +11,8 @@ public class Playlist {
     @JsonProperty("id")
     private String id;
 
+    private String name;
+
     @JsonProperty(value = "items")
     private List<TrackWrapper> tracks;
 }
