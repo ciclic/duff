@@ -12,6 +12,11 @@ public class SearchResult {
     private PlaylistWrapper playlistWrapper;
 
     @JsonIgnore
+    public String getPlaylistName() {
+        return playlistWrapper.getPlaylistName();
+    }
+
+    @JsonIgnore
     public String getFirstPlaylistId() {
         Playlist playlist = playlistWrapper.getPlaylists().stream().findFirst().orElseThrow(NotFoundException::new);
         return playlist.getId();

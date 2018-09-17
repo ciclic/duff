@@ -38,13 +38,7 @@ public class BeerService {
         Comparator<Beer> beerComparator = (beer1, beer2) -> {
             double b1Differnce = temperature - beer1.getAverage();
             double b2Difference = temperature - beer2.getAverage();
-            if (Math.abs(b1Differnce) > Math.abs(b2Difference)) {
-                return 1;
-            } else if (Math.abs(b1Differnce) < Math.abs(b2Difference)) {
-                return -1;
-            } else {
-                return 0;
-            }
+            return Double.compare(Math.abs(b1Differnce), Math.abs(b2Difference));
         };
         beerComparator.thenComparing(Beer::getStyle);
 
