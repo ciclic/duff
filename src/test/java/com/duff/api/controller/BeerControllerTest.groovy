@@ -1,8 +1,13 @@
 package com.duff.api.controller
 
+import com.duff.api.client.spotify.domain.Playlist
+import com.duff.api.client.spotify.domain.Track
+import com.duff.api.client.spotify.domain.TrackWrapper
 import com.duff.api.domain.Beer
+import com.duff.api.domain.SuggestedBeer
 import com.duff.api.exception.NotFoundException
 import com.duff.api.service.BeerService
+import com.duff.api.service.PlaylistService
 import org.springframework.http.ResponseEntity
 import spock.lang.Specification
 
@@ -15,11 +20,13 @@ import static org.springframework.http.HttpStatus.OK
 class BeerControllerTest extends Specification {
 
     BeerService beerServiceMock
+    PlaylistService playlistServiceMock
     BeerController beerController
 
     def setup(){
         beerServiceMock = Mock(BeerService)
-        beerController = new BeerController(beerServiceMock)
+        playlistServiceMock = Mock(PlaylistService)
+        beerController = new BeerController(beerServiceMock, playlistServiceMock)
     }
 
     def "should return response entity with beer when given a style"() {
@@ -86,5 +93,38 @@ class BeerControllerTest extends Specification {
         then:
             1 * beerServiceMock.removeBeer(_ as String) >> { throw new Exception()}
             beer.statusCode == INTERNAL_SERVER_ERROR
+    }
+
+    def "should return a suggested beer given a temperature"() {
+        when:
+            ResponseEntity<SuggestedBeer> beer = beerController.suggestBeer(-7)
+        then:
+            1 * beerServiceMock.getSuggestedBeer(_ as Double) >> new Beer(style: "IPA")
+            1 * playlistServiceMock.searchPlaylistByName(_ as String) >> new Playlist(
+                    name: "IPA SONGS", tracks: [ new TrackWrapper(track: new Track(name: "ABC")) ]
+            )
+            beer.statusCode == OK
+            beer.hasBody()
+            beer.body.beerStyle == "IPA"
+            beer.body.playlist
+            beer.body.playlist.name == "IPA SONGS"
+            beer.body.playlist.tracks
+    }
+
+    def "should return not found exception if no beer is found"() {
+        when:
+            ResponseEntity<SuggestedBeer> beer = beerController.suggestBeer(-7)
+        then:
+            1 * beerServiceMock.getSuggestedBeer(_ as Double) >> { throw new NotFoundException()}
+            0 * playlistServiceMock.searchPlaylistByName(_ as String)
+            beer.statusCode == NOT_FOUND
+    }
+
+    def "should return not found when no playlist is found"() {
+        when:
+            ResponseEntity<SuggestedBeer> beer = beerController.suggestBeer(-7)
+        then:
+            1 * beerServiceMock.getSuggestedBeer(_ as Double) >> new Beer(style: "IPA")
+            1 * playlistServiceMock.searchPlaylistByName(_ as String) >> { throw new NotFoundException()}
     }
 }

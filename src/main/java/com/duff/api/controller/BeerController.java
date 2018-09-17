@@ -1,8 +1,11 @@
 package com.duff.api.controller;
 
+import com.duff.api.client.spotify.domain.Playlist;
 import com.duff.api.domain.Beer;
+import com.duff.api.domain.SuggestedBeer;
 import com.duff.api.exception.NotFoundException;
 import com.duff.api.service.BeerService;
+import com.duff.api.service.PlaylistService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,9 +17,11 @@ import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
 public class BeerController {
 
     private BeerService beerService;
+    private PlaylistService playlistService;
 
-    public BeerController(BeerService beerService) {
+    public BeerController(BeerService beerService, PlaylistService playlistService) {
         this.beerService = beerService;
+        this.playlistService = playlistService;
     }
 
     @GetMapping(value = "/{style}")
@@ -61,9 +66,14 @@ public class BeerController {
     }
 
     @GetMapping("/suggested")
-    public ResponseEntity<Beer> suggestBeer(@RequestParam("temperature") double temperature) {
-        Beer suggestedBeer = beerService.getSuggestedBeer(temperature);
+    public ResponseEntity<SuggestedBeer> suggestBeer(@RequestParam("temperature") double temperature) {
+        try {
+            Beer suggestedBeer = beerService.getSuggestedBeer(temperature);
+            Playlist playlist = playlistService.searchPlaylistByName(suggestedBeer.getStyle());
 
-        return ResponseEntity.ok(beerService.getSuggestedBeer(temperature));
+            return ResponseEntity.ok(SuggestedBeer.of(suggestedBeer, playlist));
+        } catch (NotFoundException nfe) {
+            return ResponseEntity.notFound().build();
+        }
     }
  }

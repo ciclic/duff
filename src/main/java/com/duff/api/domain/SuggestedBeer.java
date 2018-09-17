@@ -3,8 +3,6 @@ package com.duff.api.domain;
 import com.duff.api.client.spotify.domain.Playlist;
 import lombok.Data;
 
-import java.util.List;
-
 @Data
 public class SuggestedBeer {
 
@@ -12,7 +10,12 @@ public class SuggestedBeer {
 
     private Playlist playlist;
 
+    private SuggestedBeer(String beerStyle, Playlist playlist) {
+        this.beerStyle = beerStyle;
+        this.playlist = playlist;
+    }
+
     public static SuggestedBeer of(Beer beer, Playlist playlist) {
-        return null;
+        return new SuggestedBeer(beer.getStyle(), playlist);
     }
 }
