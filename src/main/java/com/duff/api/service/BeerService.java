@@ -1,6 +1,7 @@
 package com.duff.api.service;
 
 import com.duff.api.domain.Beer;
+import com.duff.api.exception.ConflictException;
 import com.duff.api.exception.NotFoundException;
 import com.duff.api.repository.BeerRepository;
 import org.springframework.stereotype.Service;
@@ -25,6 +26,14 @@ public class BeerService {
     }
 
     public void saveBeer(Beer beer) {
+        beerRepository
+                .findById(beer.getStyle())
+                .ifPresentOrElse(beer1 -> {
+                    throw new ConflictException("The beer ".concat(beer1.getStyle()).concat("already exists!"));
+                }, () -> beerRepository.save(beer));
+    }
+
+    public void updateBeer(Beer beer) {
         beerRepository.save(beer);
     }
 

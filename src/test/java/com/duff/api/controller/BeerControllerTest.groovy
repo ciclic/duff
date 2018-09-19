@@ -5,12 +5,15 @@ import com.duff.api.client.spotify.domain.Track
 import com.duff.api.client.spotify.domain.TrackWrapper
 import com.duff.api.domain.Beer
 import com.duff.api.domain.SuggestedBeer
+import com.duff.api.exception.ConflictException
 import com.duff.api.exception.NotFoundException
 import com.duff.api.service.BeerService
 import com.duff.api.service.PlaylistService
 import org.springframework.http.ResponseEntity
 import spock.lang.Specification
 
+import static org.springframework.http.HttpStatus.BAD_REQUEST
+import static org.springframework.http.HttpStatus.CONFLICT
 import static org.springframework.http.HttpStatus.CREATED
 import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR
 import static org.springframework.http.HttpStatus.NOT_FOUND
@@ -54,6 +57,14 @@ class BeerControllerTest extends Specification {
             1 * beerServiceMock.saveBeer(_ as Beer)
             beer.statusCode == CREATED
     }
+    
+    def "should return conflict when beer tries to save a repeated beer"() {
+        when:
+            ResponseEntity<Beer> beer = beerController.saveBeer(new Beer())
+        then:
+            1 * beerServiceMock.saveBeer(_ as Beer) >> { throw new ConflictException() }
+            beer.statusCode == CONFLICT
+    }
 
     def "should return internal server error when beer is not saved"() {
         when:
@@ -63,19 +74,27 @@ class BeerControllerTest extends Specification {
             beer.statusCode == INTERNAL_SERVER_ERROR
     }
 
-    def "should return created when beer is updated"() {
+    def "should return no content when beer is updated"() {
         when:
-            ResponseEntity<Beer> beer = beerController.updateBeer(new Beer())
+            ResponseEntity<Beer> beer = beerController.updateBeer("IPA", new Beer(style: "IPA"))
         then:
-            1 * beerServiceMock.saveBeer(_ as Beer)
+            1 * beerServiceMock.updateBeer(_ as Beer)
             beer.statusCode == NO_CONTENT
+    }
+    
+    def "should return bad request when beer style is different than style in path"() {
+        when:
+            ResponseEntity<Beer> beer = beerController.updateBeer("IPA", new Beer(style: "Kaiser"))
+        then:
+            0 * beerServiceMock.updateBeer(_ as Beer)
+            beer.statusCode == BAD_REQUEST
     }
 
     def "should return internal server error when beer is not updated"() {
         when:
-            ResponseEntity<Beer> beer = beerController.updateBeer(new Beer())
+            ResponseEntity<Beer> beer = beerController.updateBeer("IPA", new Beer(style: "IPA"))
         then:
-            1 * beerServiceMock.saveBeer(_ as Beer) >> { throw new Exception()}
+            1 * beerServiceMock.updateBeer(_ as Beer) >> { throw new Exception()}
             beer.statusCode == INTERNAL_SERVER_ERROR
     }
 

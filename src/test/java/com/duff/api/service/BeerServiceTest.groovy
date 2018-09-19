@@ -1,6 +1,7 @@
 package com.duff.api.service
 
 import com.duff.api.domain.Beer
+import com.duff.api.exception.ConflictException
 import com.duff.api.exception.NotFoundException
 import com.duff.api.repository.BeerRepository
 import spock.lang.Specification
@@ -33,6 +34,23 @@ class BeerServiceTest extends Specification {
         then:
             1 * beerRepositoryMock.findById(_ as String) >> Optional.empty()
             thrown(NotFoundException)
+    }
+    
+    def "given a new beer should save it"() {
+        when:
+            beerService.saveBeer(new Beer(style: "IPA"))
+        then:
+            1 * beerRepositoryMock.findById(_ as String) >> Optional.empty()
+            1 * beerRepositoryMock.save(_ as Beer)
+    }
+    
+    def "given a repeated beer should not save it and throws exception"() {
+        when:
+            beerService.saveBeer(new Beer(style: "IPA"))
+        then:
+            1 * beerRepositoryMock.findById(_ as String) >> Optional.of(new Beer(style: "IPA"))
+            0 * beerRepositoryMock.save(_ as Beer)
+            thrown(ConflictException)
     }
 
     @Unroll
