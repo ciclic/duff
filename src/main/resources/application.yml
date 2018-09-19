@@ -1,0 +1,11 @@
+spring:
+  h2:
+    console:
+      enabled: true
+spotify-api:
+  client-id: 28ea6aa3c1634de0881099d2923a74e7
+  client-secret: 2da196a2220f4c9292ce2e21b52d97e8
+  uri: https://api.spotify.com/v1
+  auth-uri: https://accounts.spotify.com/api/token
+  search-limit: 1
+  fields-playlists-tracks: items(track(name, href, album(artists(name))))
