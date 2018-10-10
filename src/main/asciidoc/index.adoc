@@ -1,0 +1,44 @@
+Basic Operations
+
+List all
+[cols="h,5a"]
+|===
+| cURL
+| include::{snippets}/get-all-test/curl-request.adoc[]
+
+| Method
+| GET
+
+| Response Body
+| include::{snippets}/get-all-test/response-body.adoc[]
+|===
+
+Delete
+
+[cols="h,5a"]
+|===
+| URL
+| include::{snippets}/delete-test/curl-request.adoc[]
+
+| Method
+| DELETE
+
+| Response Body
+| include::{snippets}/delete-test/response-body.adoc[]
+|===
+
+Find a beer
+
+[cols="h,5a"]
+|===
+| URL
+| include::{snippets}/find-temperature/curl-request.adoc[]
+
+| Method
+| GET
+
+| Response Body
+| include::{snippets}/find-temperature/response-body.adoc[]
+|===
+
+

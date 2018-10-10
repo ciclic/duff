@@ -1,0 +1,13 @@
+logging:
+  level:
+    root: INFO
+spring:
+  datasource:
+    url: 'jdbc:mysql://localhost:3306/ciclic?useSSL=false'
+    username: 'root'
+    password: 'mysql'
+
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    database-platform: org.hibernate.dialect.MySQL5Dialect

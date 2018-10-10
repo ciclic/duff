@@ -2,10 +2,10 @@ package com.ciclic.challenge.duff.domain;
 
 import org.springframework.data.annotation.Id;
 
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
+@Entity
 public class Beer {
 
     @Id
@@ -20,4 +20,51 @@ public class Beer {
 
     @NotNull
     private int maxTemperature;
+
+    public Beer(){
+
+    }
+
+    public Beer(String style, int minTemperature, int maxTemperature) {
+        this.style = style;
+        this.minTemperature = minTemperature;
+        this.maxTemperature = maxTemperature;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public void setStyle(String style) {
+        this.style = style;
+    }
+
+    public int getMinTemperature() {
+        return minTemperature;
+    }
+
+    public void setMinTemperature(int minTemperature) {
+        this.minTemperature = minTemperature;
+    }
+
+    public int getMaxTemperature() {
+        return maxTemperature;
+    }
+
+    public void setMaxTemperature(int maxTemperature) {
+        this.maxTemperature = maxTemperature;
+    }
+
+    public String getStyle(){
+        return style;
+    }
+
+    public Double getTemp(){
+        return (minTemperature + maxTemperature) /2.0;
+    }
 }
+
