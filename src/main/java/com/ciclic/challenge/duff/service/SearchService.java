@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 import java.util.stream.StreamSupport;
 
 import static java.util.stream.Collectors.groupingBy;
@@ -35,7 +34,6 @@ public class SearchService {
                                                  .collect(groupingBy(elem -> Math.abs(elem.getTemp() - temperature )));
 
         Double key = StreamSupport.stream(beerMap.keySet().spliterator(), false).min(Double::compare).get();
-
         beerMap.get(key).sort(Comparator.comparing(Beer::getStyle));
 
         return beerMap.get(key).get(0);

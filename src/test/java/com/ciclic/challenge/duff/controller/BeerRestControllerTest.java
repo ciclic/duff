@@ -4,12 +4,10 @@ import com.ciclic.challenge.duff.domain.Beer;
 import com.ciclic.challenge.duff.repository.BeerRepository;
 import com.ciclic.challenge.duff.service.SearchService;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.SerializationFeature;
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.mockito.Mock;
 import org.mockito.Mockito;
 import org.mockito.invocation.InvocationOnMock;
 import org.mockito.stubbing.Answer;
@@ -28,9 +26,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
-import static org.hamcrest.Matchers.containsString;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.document;
 import static org.springframework.restdocs.mockmvc.MockMvcRestDocumentation.documentationConfiguration;
 import static org.springframework.restdocs.operation.preprocess.Preprocessors.preprocessRequest;
@@ -39,8 +35,6 @@ import static org.springframework.restdocs.operation.preprocess.Preprocessors.pr
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.delete;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.put;
-import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.post;
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.content;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.status;
 import static org.mockito.Mockito.*;
 
@@ -83,17 +77,12 @@ public class BeerRestControllerTest {
     public void getAllTest() throws Exception {
 
         List<Beer> allBeers = new ArrayList(){{
-            add(new Beer("Skol", -4, 2));
+            add(new Beer(1l, "Skol", -4, 2));
         }};
 
         Mockito.when(repository.findAll()).thenReturn(allBeers);
 
-        ObjectMapper objectMapper = new ObjectMapper();
-        String jsonInString = objectMapper.writerWithDefaultPrettyPrinter().writeValueAsString(allBeers);
-        //objectMapper.configure(SerializationFeature.INDENT_OUTPUT, true);
-
-        this.mockMvc.perform(get("/beers/all/"))
-                //.andExpect(content().string(containsString(jsonInString)))
+        this.mockMvc.perform(get("/beers/"))
                 .andExpect(status().isOk());
     }
 
@@ -107,13 +96,12 @@ public class BeerRestControllerTest {
         }).when(repository).deleteById(any(Long.class));
 
         this.mockMvc.perform(delete("/beers/1"))
-                //.andExpect(content().string(containsString(jsonInString)))
                 .andExpect(status().isNoContent());
     }
 
     @Test
     public void insertTest() throws Exception {
-        Beer beer = new Beer("Skol", -4, 2);
+        Beer beer = new Beer(1l,"Skol", -4, 2);
 
         Mockito.when(repository.save(beer)).thenReturn(beer);
 
@@ -121,21 +109,19 @@ public class BeerRestControllerTest {
                 put("/beers")
                         .contentType(MediaType.APPLICATION_JSON_UTF8)
                         .content(mapper.writeValueAsBytes(beer)))
-                //.andExpect(content().string(containsString(jsonInString)))
                 .andExpect(status().isCreated());
     }
 
     @Test
     public void updateTest() throws Exception {
-        Beer beer = new Beer("Skol", -4, 2);
+        Beer beer = new Beer(1l, "Skol", -4, 2);
 
         Mockito.when(repository.save(beer)).thenReturn(beer);
 
         this.mockMvc.perform(
-                post("/beers/1")
+                put("/beers/1")
                         .contentType(MediaType.APPLICATION_JSON_UTF8)
                         .content(mapper.writeValueAsBytes(beer)))
-                //.andExpect(content().string(containsString(jsonInString)))
                 .andExpect(status().isAccepted());
     }
 }

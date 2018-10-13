@@ -1,3 +1,5 @@
+:stylesheet: default.css
+
 Basic Operations
 
 List all
@@ -11,6 +13,34 @@ List all
 
 | Response Body
 | include::{snippets}/get-all-test/response-body.adoc[]
+|===
+
+Insert
+
+[cols="h,5a"]
+|===
+| URL
+| include::{snippets}/insert-test/curl-request.adoc[]
+
+| Method
+| PUT
+
+| Response Body
+| include::{snippets}/insert-test/response-body.adoc[]
+|===
+
+Update
+
+[cols="h,5a"]
+|===
+| URL
+| include::{snippets}/update-test/curl-request.adoc[]
+
+| Method
+| POST
+
+| Response Body
+| include::{snippets}/update-test/response-body.adoc[]
 |===
 
 Delete

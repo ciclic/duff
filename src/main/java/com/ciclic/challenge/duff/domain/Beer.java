@@ -1,6 +1,6 @@
 package com.ciclic.challenge.duff.domain;
 
-import org.springframework.data.annotation.Id;
+import javax.persistence.Id;
 
 import javax.persistence.*;
 import javax.validation.constraints.NotNull;
@@ -25,7 +25,8 @@ public class Beer {
 
     }
 
-    public Beer(String style, int minTemperature, int maxTemperature) {
+    public Beer(Long id, String style, int minTemperature, int maxTemperature) {
+        this.id = id;
         this.style = style;
         this.minTemperature = minTemperature;
         this.maxTemperature = maxTemperature;

@@ -3,9 +3,13 @@ package com.ciclic.challenge.duff.controller;
 import com.ciclic.challenge.duff.service.SearchService;
 import com.ciclic.challenge.duff.domain.Beer;
 import com.ciclic.challenge.duff.service.SpotifyService;
+import com.ciclic.challenge.duff.wrapper.Playlist;
+import com.ciclic.challenge.duff.wrapper.ResultWrapper;
 import com.wrapper.spotify.model_objects.specification.Paging;
 import com.wrapper.spotify.model_objects.specification.PlaylistSimplified;
 import com.wrapper.spotify.model_objects.specification.PlaylistTrack;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,8 +18,8 @@ import org.springframework.web.bind.annotation.*;
 public class SearchController {
 
     private SearchService service;
-
     private SpotifyService spotifyService;
+    private Logger log = LoggerFactory.getLogger(SearchController.class);
 
     @Autowired
     public SearchController(final SearchService service, final SpotifyService spotifyService) {
@@ -24,22 +28,26 @@ public class SearchController {
     }
 
     @GetMapping("/{temperature}")
-    public Beer getBeerWithTemperature(@PathVariable("temperature") Integer temperature) {
-        return service.getBeerWithTemperature(temperature);
-    }
+    public ResultWrapper getBeerWithTemperature(@PathVariable("temperature") Integer temperature) {
+        log.info("Retrieving beer and playlist with temperature: {}", temperature);
 
-    @GetMapping("/playlist")
-    public Paging<PlaylistTrack> getPlaylist(@RequestParam("query") String term) {
-        Paging<PlaylistSimplified> list =  spotifyService.searchPlaylists(term);
+        Beer beer =  service.getBeerWithTemperature(temperature);
+        Paging<PlaylistSimplified> list =  spotifyService.searchPlaylists(beer.getStyle());
 
         if(list.getItems().length == 0) {
+            log.warn("No beer was found");
             return null;
         } else {
-            String playlistId = list.getItems()[0].getId();
-            String clientId = list.getItems()[0].getOwner().getId();
+            PlaylistSimplified playlistSimplified = list.getItems()[0];
+            String playlistId = playlistSimplified.getId();
+            String clientId = playlistSimplified.getOwner().getId();
 
-            return spotifyService.getPlaylistsTracks(clientId, playlistId);
+            PlaylistTrack[] playlistTrack = spotifyService.getPlaylistsTracks(clientId, playlistId).getItems();
+
+            ResultWrapper resultWrapper = new ResultWrapper(beer.getStyle(), Playlist.builder(playlistSimplified, playlistTrack));
+
+            log.info("Result: {}", resultWrapper);
+            return resultWrapper;
         }
-
     }
 }

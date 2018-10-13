@@ -27,6 +27,7 @@ The project should have the endpoint to execute operations like creating, modify
 - [Docker compose](https://docs.docker.com/compose/install/#prerequisites)
 - [Java 1.8](https://www.oracle.com/technetwork/pt/java/javase/downloads/index.html)
 - [SDKman](https://sdkman.io/)
+- [Valid Spotify API key](https://developer.spotify.com/documentation/web-api/)
 
 ### Installing
 
@@ -44,6 +45,8 @@ docker-compose up
 ```
 
 Start the project (oh, I wasn't able to start project from docker... =( )
+
+Generate a valid API key following Spotify instructions
 
 ```
 ./gradlew bootRun
