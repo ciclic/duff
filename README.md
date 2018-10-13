@@ -28,10 +28,6 @@ The project should have the endpoint to execute operations like creating, modify
 - [Java 1.8](https://www.oracle.com/technetwork/pt/java/javase/downloads/index.html)
 - [SDKman](https://sdkman.io/)
 
-```
-Give examples
-```
-
 ### Installing
 
 Clone the project
@@ -68,7 +64,3 @@ The test reports is available at `build/reports/tests/test/index.html`
 ```
 
 The API documentation id available at `build/reports/tests/test/index.html`
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
