@@ -1,0 +1,74 @@
+:stylesheet: default.css
+
+Basic Operations
+
+List all
+[cols="h,5a"]
+|===
+| cURL
+| include::{snippets}/get-all-test/curl-request.adoc[]
+
+| Method
+| GET
+
+| Response Body
+| include::{snippets}/get-all-test/response-body.adoc[]
+|===
+
+Insert
+
+[cols="h,5a"]
+|===
+| URL
+| include::{snippets}/insert-test/curl-request.adoc[]
+
+| Method
+| PUT
+
+| Response Body
+| include::{snippets}/insert-test/response-body.adoc[]
+|===
+
+Update
+
+[cols="h,5a"]
+|===
+| URL
+| include::{snippets}/update-test/curl-request.adoc[]
+
+| Method
+| POST
+
+| Response Body
+| include::{snippets}/update-test/response-body.adoc[]
+|===
+
+Delete
+
+[cols="h,5a"]
+|===
+| URL
+| include::{snippets}/delete-test/curl-request.adoc[]
+
+| Method
+| DELETE
+
+| Response Body
+| include::{snippets}/delete-test/response-body.adoc[]
+|===
+
+Find a beer
+
+[cols="h,5a"]
+|===
+| URL
+| include::{snippets}/find-temperature/curl-request.adoc[]
+
+| Method
+| GET
+
+| Response Body
+| include::{snippets}/find-temperature/response-body.adoc[]
+|===
+
+

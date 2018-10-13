@@ -1,13 +1,10 @@
-# :beer: Desafio
+# Ciclic challenge
 
-Nossos devs gostam muito de cerveja, e por isso queremos criar nossa própria cervejeira :smirk::beer:. 
+The challenge consists creating a microservice project which is possible to execute CRUD operations and also retrieve a beer with a spotify playlist following some rules.
 
-O desafio é servir a cerveja sempre gelada! Você sabia que existem vários estilos de cerveja (IPA, Weizenbier, Pilsens, etc)? 
+## Getting Started
 
-Sabia que cada estilo tem uma temperatura ideal de consumo? Isso mesmo, em uma temperatura ideal sua breja fica mais saborosa :open_mouth:! 
-
-**Exemplo:**
-
+The table illustrates which information we have about beers in the project.
 
 |Estilo|Temperatura Ideal para consumo|
 |:---:|:---:|
@@ -21,74 +18,52 @@ Sabia que cada estilo tem uma temperatura ideal de consumo? Isso mesmo, em uma t
 |Imperial Stouts|-10° a 13°|
 |Brown ale|0° a 14°|
 
+The project should have the endpoint to execute operations like creating, modifying, deleting and retrieving beers.
 
-## Tarefas
+### Prerequisites
 
-### 1. Crie um microserviço para os estilos de cerveja
+- [Github](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
+- [Docker](https://docs.docker.com/install/)
+- [Docker compose](https://docs.docker.com/compose/install/#prerequisites)
+- [Java 1.8](https://www.oracle.com/technetwork/pt/java/javase/downloads/index.html)
+- [SDKman](https://sdkman.io/)
+- [Valid Spotify API key](https://developer.spotify.com/documentation/web-api/)
 
-Precisamos que crie uma api que possamos listar, cadastrar, deletar e atualizar nossos estilos de cerveja e suas temperaturas(C.R.U.D).
+### Installing
 
+Clone the project
 
-### 2. Criar um endpoint
-
-Para nos ajudar a criar nossa máquina cervejeira, desenvolva uma **api Restful** na qual, dada uma temperatura, ela nos devolva o estilo de cerveja mais adequado para aquela temperatura e uma playlist que contenha o nome desse estilo(use a api do [spotify](https://developer.spotify.com/documentation/web-api/) para buscar as playlist). 
-
-**Regras de negócio** 
-
-* Todo estilo de cerveja tem uma temperatura mínima e uma temperatura máxima.
-* O cálculo para selecionar o estilo de cerveja adequado: é qual estilo contém a média das suas temperaturas mais próxima do input dado pela api.(Se o input foi -2 e temos as cervejas Dunkel e Weissbier o estilo selecionado é o Dunkel).
-* Caso o resultado seja mais de um estilo de cerveja, devolver o estilo por ordem alfabética(entre Pilsens e IPA voltára IPA) e caso de empate na primeira letra, ordernar pela segunda e assim por diante.
-* Caso não tenha uma playlist que contenha o nome do estilo, retornar um HTTP Status que achar mais adequado.
-* A lista dada foi um exemplo, a api tem que estar pronta para receber mais estilos e mais temperaturas.
-
-
-Exemplo:
-
-**Entrada:**
-```json
-{
-"temperature" : -7
-}
 ```
-**Saída**
-```json
-{
-  "beerStyle": "IPA",
-  "playlist":{	
-  "name":"IPARTY",
-  "tracks": [{
-			"name": "Lua de Cristal",
-			"artist": "Xuxa",
-			"link": "https: //open.spotify.com/artist/21451j1KhjAiaYKflxBjr1"
-		},
-		{
-			"name": "Vogue",
-			"artist": "Madonna",
-			"link": "https: //open.spotify.com/artist/21451j1Khj123YKflxBjr1"
-		}
-	]
-  }
-}
+git clone git@github.com:gustavotsuji/duff.git
+cd duff
 ```
 
+Execute docker compose to run database
 
+```
+docker-compose up
+```
 
-### 3. O que esperamos:
+Start the project (oh, I wasn't able to start project from docker... =( )
 
-* Seu projeto deve ser **multi-plataforma**.
-* Crie uma documentação e explique como como rodar localmente e também como realizar o deploy.
-* Quanto mais simples for para realizar o deploy, melhor!
-* Sinta-se a vontade para usar qualquer framework e ferramentas que se sentir a vontade a única restrição é a linguagem de programação que deve ser **Java**
+Generate a valid API key following Spotify instructions
 
-## O que iremos avaliar
+```
+./gradlew bootRun
+```
 
-Nosso time irá avaliar:
-- **Desempenho**
-- **Testes**
-- **Manutenabilidade**
-- **Separação de responsabilidades**
-- **Engenharia de software**
+## Running the tests
 
-Seu código diz muito sobre você, então relaxa, o que queremos é te conhecer melhor através de seu código :wink:.
+```
+./gradlew test
+```
 
-![](./duff_man.png)
+The test reports is available at `build/reports/tests/test/index.html`
+
+## Documentation
+
+```
+./gradlew build ascii
+```
+
+The API documentation id available at `build/reports/tests/test/index.html`

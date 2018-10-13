@@ -1,0 +1,17 @@
+bin
+out/
+build
+repos
+.classpath
+.project
+.settings
+.gradle
+*.log
+.idea/
+*.iml
+*.ipr
+*.iws
+#gradle/
+!gradle/wrapper/gradle-wrapper.jar
+!gradle/wrapper/gradle-wrapper.properties
+
