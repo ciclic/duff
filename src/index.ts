@@ -1,15 +1,7 @@
-import express from 'express';
 import dotenv from 'dotenv';
+import { expressAdapter } from './ports_and_adapters/server/expressAdapter';
 
 dotenv.config();
-
-const app = express();
 const { PORT = 3000 } = process.env; 
 
-app.get('/', (req, res) => {
-  res.send('Hello, world!');
-});
-
-app.listen(PORT, () => {
-  console.log(`Servidor iniciado na porta ${PORT}`);
-});
+expressAdapter().start(PORT);
