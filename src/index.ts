@@ -5,6 +5,6 @@ import { castStringToNumber } from './helpers/helpers';
 dotenv.config();
 const PORT: number = castStringToNumber(process.env.PORT, 3000)
 
-
 const server = expressAdapter()
+console.log(PORT)
 server.start(PORT);
