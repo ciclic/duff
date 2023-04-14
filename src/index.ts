@@ -1,15 +1,10 @@
-import express from 'express';
 import dotenv from 'dotenv';
+import { expressAdapter } from './ports_and_adapters/server/expressAdapter';
+import { castStringToNumber } from './helpers/helpers';
 
 dotenv.config();
+const PORT: number = castStringToNumber(process.env.PORT, 3000)
 
-const app = express();
-const { PORT = 3000 } = process.env; 
 
-app.get('/', (req, res) => {
-  res.send('Hello, world!');
-});
-
-app.listen(PORT, () => {
-  console.log(`Servidor iniciado na porta ${PORT}`);
-});
+const server = expressAdapter()
+server.start(PORT);
