@@ -1,12 +1,30 @@
-version: '3'
+version: '3.2'
 services:
-  app:
-    build: .
-    ports:
-      - "3000:3000"
-    links:
-      - "db"
   db:
     image: mongo:latest
+    restart: always
+    ports:
+      - ${DB_PORT}:27017
+    environment:
+      MONGO_INITDB_DATABASE: ${DB_NAME}
+      MONGO_INITDB_ROOT_USERNAME: ${DB_USER}
+      MONGO_INITDB_ROOT_PASSWORD: ${DB_PASS}
     volumes:
       - ./data:/data/db
+  app:
+    image: node:18
+    container_name: duff_app
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - ${PORT}:${PORT}
+    volumes:
+      - .:/usr/src/app
+    working_dir: /usr/src/app
+    command: npm start
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "5"
