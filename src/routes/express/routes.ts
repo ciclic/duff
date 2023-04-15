@@ -3,8 +3,27 @@ const router = express.Router();
 
 import { Beer } from "../../domain/mongodb/schemas/Beer";
 
-router.get('/test', (req, res) => {
-    res.send('Hello World!');
+router.get('/health', (req, res) => {
+    res.send('Service available');
+});
+
+router.get('/', async (req, res) => {
+    const { style, minTemperature, maxTemperature, skip = 0, limit = 9999 } = req.query;
+
+    const filter = {
+        ...( style && { style }),
+        ...( minTemperature && { minTemperature }),
+        ...( maxTemperature && { maxTemperature })
+    };
+
+    console.log(filter, skip, limit)
+
+    try {
+        const beers = await Beer.find(filter).skip(Number(skip)).limit(Number(limit));
+        return res.status(200).json(beers)
+    } catch(error) {
+        return res.status(500).json({ error });
+    }
 });
 
 router.post('/', async (req, res) => {
