@@ -7,14 +7,15 @@ const { DB_USER, DB_PASS, DB_HOST, DB_PORT, DB_NAME } = process.env;
 
 export const MongoAdapter: DatabasePort = () => {
   const connect = () => {
-    const uri = `mongodb://${DB_USER}:${DB_PASS}@${DB_HOST}:${DB_PORT}/${DB_NAME}`;
+    const uri = `mongodb://${DB_USER}:${DB_PASS}@${DB_HOST}:${DB_PORT}`;
 
-    console.log("Trying to connect to database...");
+    console.log(uri)
+
     mongoose
-      .connect(uri)
+      .connect(uri, { dbName: DB_NAME })
       .catch(error => console.log(error));
     mongoose.connection.on("error", () => console.log('connection error:'));
-    mongoose.connection.once("open", () => console.log('database connected'));
+    mongoose.connection.once("open", () => console.log('Database connected'));
   }
 
   return {

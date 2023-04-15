@@ -1,7 +1,11 @@
 import mongoose from "mongoose";
 
 const beerSchema = new mongoose.Schema({
-  temperature: {
+  minTemperature: {
+    type: Number,
+    required: true
+  },
+  maxTemperature: {
     type: Number,
     required: true
   },
@@ -11,6 +15,4 @@ const beerSchema = new mongoose.Schema({
   }
 });
 
-const Beer = mongoose.model('Beer', beerSchema);
-
-module.exports = Beer;
+export const Beer = mongoose.model('Beer', beerSchema);

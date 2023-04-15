@@ -10,8 +10,12 @@ const server = expressAdapter();
 
 const database = MongoAdapter();
 
+
 (() => {
-    server.start(PORT);
-    database.connect()
+    try {
+        database.connect();
+    } finally {
+        setTimeout(() => server.start(PORT), 1000);
+    }
 }) ();
 

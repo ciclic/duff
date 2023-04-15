@@ -1,6 +1,8 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 import { ServerPort } from './serverPort';
+import { timeLog } from '../../middlewares/time-log';
+import router from '../../routes/express/routes';
 
 export const expressAdapter: ServerPort = () => {
     const start = (port: number) => {
@@ -8,7 +10,10 @@ export const expressAdapter: ServerPort = () => {
         app.use(express.json());
         app.use(bodyParser.json());
 
-        app.get('/test', (req, res) => {
+        app.use(timeLog)
+        app.use(router)
+
+        router.get('/', (req, res) => {
             res.send('Hello World!');
         });
 
