@@ -25,15 +25,17 @@ router.post('/', async (req, res) => {
         await Beer.create(beer);
         return res.status(201).json({ message: "CREATED" });
     } catch(error) {
-        return res.status(500).send({ error });
+        return res.status(500).json({ error });
     }
 });
 
 router.put('/', async (req, res) => {
+    const {style, minTemperature, maxTemperature } = req.body;
+
     const beer = {
-        minTemperature: 0,
-        maxTemperature: 1,
-        style: "Dunkel"
+        minTemperature,
+        maxTemperature,
+        style
     } 
 
     try {
@@ -46,8 +48,19 @@ router.put('/', async (req, res) => {
 
         return res.status(200).json(result);
     } catch(error) {
-        return res.status(500).send({ error });
+        return res.status(500).json({ error });
     }
-})
+});
+
+router.delete('/', async (req, res) => {
+    const { style } = req.body;
+
+    try {
+        await Beer.deleteOne({ style });
+        return res.status(204).send()
+    } catch(error) {
+        return res.status(500).json({ error });
+    }
+});
 
 export default router;
