@@ -1,5 +1,5 @@
 import axios from 'axios';
-import queryString from "node:querystring";
+import queryString from 'node:querystring';
 import { getAuth } from '.';
 
 jest.mock('axios');
@@ -28,12 +28,12 @@ describe('getAuth', () => {
       {
         headers: {
           Authorization:
-            'Basic ' +
-            new Buffer(
-              `${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`
-            ).toString('base64'),
+            `Basic ${
+              new Buffer(
+                `${process.env.SPOTIFY_CLIENT_ID}:${process.env.SPOTIFY_CLIENT_SECRET}`,
+              ).toString('base64')}`,
         },
-      }
+      },
     );
   });
 

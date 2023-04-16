@@ -1,10 +1,10 @@
-import express from "express";
-import createRouteDecorator from "./createRoute";
-
+import express from 'express';
 import dotenv from 'dotenv';
-import { findSuitablePlaylist } from "../../../core/services/findSuitablePlaylist";
-dotenv.config();
+import createRouteDecorator from './createRoute';
 
+import { findSuitablePlaylist } from '../../../core/services/findSuitablePlaylist';
+
+dotenv.config();
 
 const router = express.Router();
 const Controller = createRouteDecorator;
