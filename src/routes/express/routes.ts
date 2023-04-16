@@ -2,6 +2,7 @@ import express from "express";
 const router = express.Router();
 
 import { Beer } from "../../domain/mongodb/schemas/Beer";
+import { findSuitableBeer } from "../../services/findSuitableBeer";
 
 router.get('/health', (req, res) => {
     res.send('Service available');
@@ -11,24 +12,7 @@ router.get('/suitable', async(req, res) => {
     const { temperature } = req.query;
 
     try {
-        const suitableBeer = await Beer.aggregate([
-            {
-                $project: {
-                    avg_temperature: { $avg: [{$toDouble: '$minTemperature'}, {$toDouble: '$maxTemperature'}] } 
-                }
-            },
-            {
-                $addFields: {
-                    distance: { $abs: { $subtract: [{$toDouble: temperature}, '$avg_temperature'] } } 
-                }
-            },
-            {
-                $sort: { distance: 1 }
-            },
-            {
-                $limit: 1
-            }
-        ]);  
+        const suitableBeer = findSuitableBeer(Number(temperature));
         return res.status(200).json(suitableBeer);
     } catch(error) {
         console.log(error)
