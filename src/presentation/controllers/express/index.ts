@@ -1,7 +1,7 @@
 import express from "express";
 import { Router, Request, Response } from 'express';
-import { Beer } from "../../../domain/mongodb/schemas/Beer";
-import { findSuitableBeer } from "../../../services/findSuitableBeer";
+import { Beer } from "../../../core/domain/schemas/Beer";
+import { findSuitableBeer } from "../../../core/services/findSuitableBeer";
 import createRouteDecorator from "./createRoute";
 
 const router = express.Router();

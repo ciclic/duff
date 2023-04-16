@@ -1,7 +1,7 @@
 import dotenv from 'dotenv';
-import { expressAdapter } from './ports_and_adapters/server/expressAdapter';
-import { castStringToNumber } from './helpers/helpers';
-import { MongoAdapter } from './ports_and_adapters/database/mongoAdapter';
+import { expressAdapter } from './infra/http/server/expressAdapter';
+import { MongoAdapter } from './infra/database/mongodb/mongoAdapter';
+import { castStringToNumber } from './shared/helpers/helpers';
 
 dotenv.config();
 const PORT: number = castStringToNumber(process.env.PORT, 3000)
