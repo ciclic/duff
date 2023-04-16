@@ -20,5 +20,7 @@ export const findSuitableBeer = async (temperature: number) => {
         }
     ]);  
 
+    console.log(suitableBeer)
+
     return suitableBeer;
 }
