@@ -7,6 +7,35 @@ router.get('/health', (req, res) => {
     res.send('Service available');
 });
 
+router.get('/suitable', async(req, res) => {
+    const { temperature } = req.query;
+
+    try {
+        const suitableBeer = await Beer.aggregate([
+            {
+                $project: {
+                    avg_temperature: { $avg: [{$toDouble: '$minTemperature'}, {$toDouble: '$maxTemperature'}] } 
+                }
+            },
+            {
+                $addFields: {
+                    distance: { $abs: { $subtract: [{$toDouble: temperature}, '$avg_temperature'] } } 
+                }
+            },
+            {
+                $sort: { distance: 1 }
+            },
+            {
+                $limit: 1
+            }
+        ]);  
+        return res.status(200).json(suitableBeer);
+    } catch(error) {
+        console.log(error)
+        return res.status(500).json({ error });
+    }
+})
+
 router.get('/', async (req, res) => {
     const { style, minTemperature, maxTemperature, skip = 0, limit = 9999 } = req.query;
 
@@ -15,8 +44,6 @@ router.get('/', async (req, res) => {
         ...( minTemperature && { minTemperature }),
         ...( maxTemperature && { maxTemperature })
     };
-
-    console.log(filter, skip, limit)
 
     try {
         const beers = await Beer.find(filter).skip(Number(skip)).limit(Number(limit));
