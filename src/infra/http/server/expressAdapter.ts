@@ -3,6 +3,7 @@ import bodyParser from 'body-parser';
 import { ServerPort } from './ports/serverPort';
 import { timeLog } from '../../../core/middlewares/time-log';
 import router from '../../../presentation/controllers/express';
+import spotifyRouter from '../../../presentation/controllers/express/spotify';
 
 export const expressAdapter: ServerPort = () => {
     const start = (port: number) => {
@@ -12,10 +13,7 @@ export const expressAdapter: ServerPort = () => {
 
         app.use(timeLog)
         app.use(router)
-
-        router.get('/', (req, res) => {
-            res.send('Hello World!');
-        });
+        app.use(spotifyRouter)
 
         app.listen(port, () => {
             console.log(`Server is running on port ${port}`);
