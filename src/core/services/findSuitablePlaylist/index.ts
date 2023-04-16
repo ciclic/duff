@@ -1,6 +1,6 @@
 import dotenv from 'dotenv';
 import SpotifyWebApi from 'spotify-web-api-node';
-import { getAuth } from './spotifyAuth';
+import { getAuth } from '../spotifyAuth';
 dotenv.config();
 
 const { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } = process.env;
@@ -14,10 +14,8 @@ export const findSuitablePlaylist = async () => {
     });
 
   try {
-    console.log("before auth")
     const token = await getAuth();
     spotifyApi.setAccessToken(token);
-    console.log(token);
     const playlist = await spotifyApi.searchPlaylists('Dunkel')
     return playlist;
   } catch (err: any){

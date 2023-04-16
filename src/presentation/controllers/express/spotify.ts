@@ -2,7 +2,7 @@ import express from "express";
 import createRouteDecorator from "./createRoute";
 
 import dotenv from 'dotenv';
-import { findSuitablePlaylist } from "../../../core/services/findSuitablePlaylist";
+import { findSuitablePlaylist } from "../../../core/services/findSuitablePlaylist/findSuitablePlaylist";
 dotenv.config();
 
 
