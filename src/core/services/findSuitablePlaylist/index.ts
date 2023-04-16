@@ -6,7 +6,7 @@ dotenv.config();
 const { SPOTIFY_CLIENT_ID, SPOTIFY_CLIENT_SECRET } = process.env;
 
 
-export const findSuitablePlaylist = async () => {
+export const findSuitablePlaylist = async (beerStyle: string) => {
   const spotifyApi = new SpotifyWebApi({
       clientId: SPOTIFY_CLIENT_ID,
       clientSecret: SPOTIFY_CLIENT_SECRET,
@@ -16,7 +16,13 @@ export const findSuitablePlaylist = async () => {
   try {
     const token = await getAuth();
     spotifyApi.setAccessToken(token);
-    const playlist = await spotifyApi.searchPlaylists('Dunkel')
+    const playlists = await spotifyApi.searchPlaylists(beerStyle)
+    const playlistId = playlists.body.playlists?.items[0].id;
+    if(!playlistId){
+      throw new Error('not found') 
+    }
+
+    const playlist = await spotifyApi.getPlaylist(playlistId);
     return playlist;
   } catch (err: any){
     throw err;

@@ -23,7 +23,7 @@ describe('findSuitablePlaylist', () => {
       searchPlaylists: searchPlaylistsSpy,
     }));
 
-    const actualPlaylist = await findSuitablePlaylist();
+    const actualPlaylist = await findSuitablePlaylist('Dunkel');
 
     expect(actualPlaylist).toEqual({ body: { playlists: { items: [expectedPlaylist] } } });
     expect(setAccessTokenSpy).toHaveBeenCalledTimes(1);

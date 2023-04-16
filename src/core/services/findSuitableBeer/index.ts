@@ -4,6 +4,7 @@ export const findSuitableBeer = async (temperature: number) => {
     const suitableBeer = await Beer.aggregate([
         {
             $project: {
+                style: '$style',
                 avg_temperature: { $avg: [{$toDouble: '$minTemperature'}, {$toDouble: '$maxTemperature'}] } 
             }
         },
