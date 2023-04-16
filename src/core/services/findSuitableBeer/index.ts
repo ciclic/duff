@@ -14,7 +14,7 @@ export const findSuitableBeer = async (temperature: number) => {
       },
     },
     {
-      $sort: { distance: 1 },
+      $sort: { distance: 1, style: 1 },
     },
     {
       $limit: 1,
