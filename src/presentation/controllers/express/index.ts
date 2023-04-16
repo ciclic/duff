@@ -3,6 +3,7 @@ import express, { Request, Response } from 'express';
 import { Beer } from '../../../core/domain/schemas/Beer';
 import { findSuitableBeer } from '../../../core/services/findSuitableBeer';
 import createRouteDecorator from './createRoute';
+import { createBeer } from '../../../core/services/createBeer';
 
 const router = express.Router();
 const Controller = createRouteDecorator;
@@ -34,24 +35,7 @@ Controller('get', '/', router, async (req: Request, res: Response) => {
 
 Controller('post', '/', router, async (req: Request, res: Response) => {
   const { style, minTemperature, maxTemperature } = req.body;
-  if (!style || !minTemperature || !maxTemperature) {
-    return res.status(400).json({
-      error: 'Bad request',
-    });
-  }
-
-  const beer = {
-    minTemperature,
-    maxTemperature,
-    style,
-  };
-
-  const foundBeer = await Beer.findOne({ style });
-  if (foundBeer) {
-    return res.status(401).json({ message: 'This beer style already exists on database' });
-  }
-
-  await Beer.create(beer);
+  await createBeer({ style, minTemperature, maxTemperature });
   return res.status(201).json({ message: 'CREATED' });
 });
 
