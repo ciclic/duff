@@ -11,8 +11,13 @@ const Controller = createRouteDecorator;
 
 Controller('get', '/playlist', router, async (req, res) => {
   const { style } = req.query;
+  if (!style) {
+    return res.status(400).json({
+      error: 'Style is required',
+    });
+  }
   const playlist = await findSuitablePlaylist(String(style));
-  res.send(playlist);
+  return res.send(playlist);
 });
 
 export default router;

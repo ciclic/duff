@@ -13,7 +13,7 @@ Controller('get', '/health', router,  async (req, res) => {
 });
 
 Controller('get', '/suitable', router, async(req, res) => {
-    const { temperature } = req.query;
+    const { temperature = 0 } = req.query;
     const suitableBeer = await findSuitableBeer(Number(temperature));
     return res.status(200).json(suitableBeer);
 });
@@ -33,6 +33,11 @@ Controller('get', '/', router, async (req, res) => {
 
 Controller('post', '/', router, async (req, res) => {
     const {style, minTemperature, maxTemperature } = req.body;
+    if (!style || !minTemperature || !maxTemperature) {
+        return res.status(400).json({
+            error: 'Bad request'
+        });
+    }
 
     const beer = {
         minTemperature,
@@ -70,6 +75,12 @@ Controller('put', '/', router, async(req, res) => {
 
 Controller('delete', '/', router, async (req, res) => {
     const { style } = req.body;
+    // add validation
+    if (!style) {
+        return res.status(400).json({
+            error: 'Bad request'
+        });
+    }
 
     await Beer.deleteOne({ style });
     return res.status(204).send();

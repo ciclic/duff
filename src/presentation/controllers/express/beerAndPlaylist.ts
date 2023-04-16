@@ -12,8 +12,12 @@ const Controller = createRouteDecorator;
 
 Controller('get', '/beer-playlist', router, async (req, res) => {
   const { temperature } = req.query;
+  if (!temperature) {
+    return res.status(400).json({
+      error: "Please provide a temperature",
+    });
+  }
   const suitableBeer = await findSuitableBeer(Number(temperature));
-  console.log(suitableBeer[0].style)
   const { style } = suitableBeer[0];
   const suitablePlaylist = await findSuitablePlaylist(String(style));
 
@@ -29,7 +33,7 @@ Controller('get', '/beer-playlist', router, async (req, res) => {
     }
   }
 
-  res.status(200).json(response);
+  return res.status(200).json(response);
 });
 
 export default router;
