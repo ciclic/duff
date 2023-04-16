@@ -4,6 +4,7 @@ import { Beer } from '../../../core/domain/schemas/Beer';
 import { findSuitableBeer } from '../../../core/services/findSuitableBeer';
 import createRouteDecorator from './createRoute';
 import { createBeer } from '../../../core/services/createBeer';
+import { initDatabase } from '../../../core/services/initDatabase';
 
 const router = express.Router();
 const Controller = createRouteDecorator;
@@ -68,6 +69,11 @@ Controller('delete', '/', router, async (req: Request, res: Response) => {
   }
 
   await Beer.deleteOne({ style });
+  return res.status(204).send();
+});
+
+Controller('post', '/init', router, async (req: Request, res: Response) => {
+  await initDatabase();
   return res.status(204).send();
 });
 
