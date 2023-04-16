@@ -9,6 +9,10 @@ export const findSuitablePlaylist = async (beerStyle: string) => {
     const token = await getAuth();
     spotifyApi.setAccessToken(token);
     const playlists = await spotifyApi.searchPlaylists(beerStyle);
+    if(playlists.body.playlists?.items.length === 0) {
+      throw new Error('There are no playlists matching with the beer style');
+    }
+
     const playlistId = playlists.body.playlists?.items[0].id;
     if (!playlistId) {
       throw new Error('not found');
