@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import { ServerPort } from './serverPort';
 import { timeLog } from '../../middlewares/time-log';
-import router from '../../routes/express';
+import router from '../../presentation/controllers/express';
 
 export const expressAdapter: ServerPort = () => {
     const start = (port: number) => {
