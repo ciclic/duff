@@ -1,18 +1,18 @@
-import mongoose from "mongoose";
+import mongoose from 'mongoose';
 
 const beerSchema = new mongoose.Schema({
   minTemperature: {
     type: Number,
-    required: true
+    required: true,
   },
   maxTemperature: {
     type: Number,
-    required: true
+    required: true,
   },
   style: {
     type: String,
-    required: true
-  }
+    required: true,
+  },
 });
 
 export const Beer = mongoose.model('Beer', beerSchema);
