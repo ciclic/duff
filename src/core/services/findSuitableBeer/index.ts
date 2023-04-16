@@ -1,4 +1,4 @@
-import { Beer } from "../domain/schemas/Beer";
+import { Beer } from "../../domain/schemas/Beer";
 
 export const findSuitableBeer = async (temperature: number) => {
     const suitableBeer = await Beer.aggregate([
@@ -18,9 +18,7 @@ export const findSuitableBeer = async (temperature: number) => {
         {
             $limit: 1
         }
-    ]);  
-
-    console.log(suitableBeer)
+    ]); 
 
     return suitableBeer;
 }
