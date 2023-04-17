@@ -1,0 +1,165 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "duff",
+    "dateExported": "2023-04-17T18:00:50.469Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "9a3fac12-db9b-4f0e-a775-92ca74c9d420",
+            "colId": "c43065b4-a793-47cc-bf47-576d8624f788",
+            "containerId": "",
+            "name": "beer and playlist",
+            "url": "http://localhost:3002/beer-playlist?temperature=1",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-04-17T17:55:19.913Z",
+            "modified": "2023-04-17T17:55:19.913Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "temperature",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "2757aa38-96a2-4b31-b4da-1048e3b07cb8",
+            "colId": "c43065b4-a793-47cc-bf47-576d8624f788",
+            "containerId": "",
+            "name": "get beers",
+            "url": "http://localhost:3001?style=Dunkel&minTemperature=-2&maxTemperature=2&limit=1&skip=0",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-04-17T17:56:25.418Z",
+            "modified": "2023-04-17T17:56:25.418Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "style",
+                    "value": "Dunkel",
+                    "isPath": false
+                },
+                {
+                    "name": "minTemperature",
+                    "value": "-2",
+                    "isPath": false
+                },
+                {
+                    "name": "maxTemperature",
+                    "value": "2",
+                    "isPath": false
+                },
+                {
+                    "name": "limit",
+                    "value": "1",
+                    "isPath": false
+                },
+                {
+                    "name": "skip",
+                    "value": "0",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        },
+        {
+            "_id": "9f493211-7573-47a1-bfdb-24aff918a4f1",
+            "colId": "c43065b4-a793-47cc-bf47-576d8624f788",
+            "containerId": "",
+            "name": "create beer",
+            "url": "http://localhost:3002/",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-04-17T17:58:32.101Z",
+            "modified": "2023-04-17T17:58:32.101Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"style\":\"Dunkel\", \n  \"minTemperature\":-1, \n  \"maxTemperatureskip\":2\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "75852574-b909-4b85-addf-5a589f4253d4",
+            "colId": "c43065b4-a793-47cc-bf47-576d8624f788",
+            "containerId": "",
+            "name": "create beer Copy",
+            "url": "http://localhost:3002/",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2023-04-17T17:58:52.731Z",
+            "modified": "2023-04-17T17:58:52.731Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"style\":\"Dunkel\", \n  \"minTemperature\":-1, \n  \"maxTemperatureskip\":2\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "d1f3fb48-462e-48d4-9c65-64241eca6cd5",
+            "colId": "c43065b4-a793-47cc-bf47-576d8624f788",
+            "containerId": "",
+            "name": "update beer",
+            "url": "http://localhost:3002/",
+            "method": "PUT",
+            "sortNum": 50000,
+            "created": "2023-04-17T17:59:32.195Z",
+            "modified": "2023-04-17T17:59:32.195Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"style\":\"Dunkel\", \n  \"minTemperature\":-1, \n  \"maxTemperatureskip\":2\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "3bb29309-244c-4ab6-a729-ae8544659348",
+            "colId": "c43065b4-a793-47cc-bf47-576d8624f788",
+            "containerId": "",
+            "name": "delete beer",
+            "url": "http://localhost:3002/",
+            "method": "DELETE",
+            "sortNum": 60000,
+            "created": "2023-04-17T18:00:23.663Z",
+            "modified": "2023-04-17T18:00:23.663Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"style\":\"Dunkel\"\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "698310e9-da73-4a6a-80c6-d4ecddb5d6fa",
+            "colId": "c43065b4-a793-47cc-bf47-576d8624f788",
+            "containerId": "",
+            "name": "most suitable beer",
+            "url": "http://localhost:3002/suitable?temperature=1",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2023-04-17T18:00:43.167Z",
+            "modified": "2023-04-17T18:00:43.167Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "temperature",
+                    "value": "1",
+                    "isPath": false
+                }
+            ],
+            "tests": []
+        }
+    ]
+}

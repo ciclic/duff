@@ -1,0 +1,198 @@
+{
+    "info": {
+        "name": "duff",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+        "description": ""
+    },
+    "item": [
+        {
+            "name": "beer and playlist",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3002/beer-playlist?temperature=1",
+                    "query": [
+                        {
+                            "key": "temperature",
+                            "value": "1"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "beer-playlist"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3002"
+                }
+            }
+        },
+        {
+            "name": "get beers",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3001?style=Dunkel&minTemperature=-2&maxTemperature=2&limit=1&skip=0",
+                    "query": [
+                        {
+                            "key": "style",
+                            "value": "Dunkel"
+                        },
+                        {
+                            "key": "minTemperature",
+                            "value": "-2"
+                        },
+                        {
+                            "key": "maxTemperature",
+                            "value": "2"
+                        },
+                        {
+                            "key": "limit",
+                            "value": "1"
+                        },
+                        {
+                            "key": "skip",
+                            "value": "0"
+                        }
+                    ],
+                    "variable": [],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3001"
+                }
+            }
+        },
+        {
+            "name": "create beer",
+            "request": {
+                "method": "POST",
+                "url": {
+                    "raw": "http://localhost:3002/",
+                    "path": [
+                        ""
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3002"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"style\":\"Dunkel\", \n  \"minTemperature\":-1, \n  \"maxTemperatureskip\":2\n}"
+                }
+            }
+        },
+        {
+            "name": "create beer Copy",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost:3002/",
+                    "path": [
+                        ""
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3002"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"style\":\"Dunkel\", \n  \"minTemperature\":-1, \n  \"maxTemperatureskip\":2\n}"
+                }
+            }
+        },
+        {
+            "name": "update beer",
+            "request": {
+                "method": "PUT",
+                "url": {
+                    "raw": "http://localhost:3002/",
+                    "path": [
+                        ""
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3002"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"style\":\"Dunkel\", \n  \"minTemperature\":-1, \n  \"maxTemperatureskip\":2\n}"
+                }
+            }
+        },
+        {
+            "name": "delete beer",
+            "request": {
+                "method": "DELETE",
+                "url": {
+                    "raw": "http://localhost:3002/",
+                    "path": [
+                        ""
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3002"
+                },
+                "body": {
+                    "mode": "raw",
+                    "options": {
+                        "raw": {
+                            "language": "json"
+                        }
+                    },
+                    "raw": "{\n  \"style\":\"Dunkel\"\n}"
+                }
+            }
+        },
+        {
+            "name": "most suitable beer",
+            "request": {
+                "method": "GET",
+                "url": {
+                    "raw": "http://localhost:3002/suitable?temperature=1",
+                    "query": [
+                        {
+                            "key": "temperature",
+                            "value": "1"
+                        }
+                    ],
+                    "variable": [],
+                    "path": [
+                        "suitable"
+                    ],
+                    "protocol": "http",
+                    "host": [
+                        "localhost"
+                    ],
+                    "port": "3002"
+                }
+            }
+        }
+    ]
+}
