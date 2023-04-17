@@ -2,6 +2,7 @@ version: '3.2'
 services:
   db:
     image: mongo:latest
+    container_name: db
     restart: always
     ports:
       - ${DB_PORT}:27017
