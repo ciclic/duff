@@ -12,8 +12,6 @@ export const MongoAdapter: DatabasePort = () => {
   const connect = () => {
     const uri = `mongodb://${DB_USER}:${DB_PASS}@${DB_HOST}:${DB_PORT}`;
 
-    console.log(uri);
-
     mongoose
       .connect(uri, { dbName: DB_NAME })
       .catch((error) => console.log(error));

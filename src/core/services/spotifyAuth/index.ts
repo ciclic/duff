@@ -17,7 +17,6 @@ export const getAuth = async () => {
         Authorization: `Basic ${Buffer.from(`${SPOTIFY_CLIENT_ID}:${SPOTIFY_CLIENT_SECRET}`).toString('base64')}`,
       },
     });
-    console.log(auth.data.access_token);
     return auth.data.access_token;
   } catch (e) {
     throw e;
