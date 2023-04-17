@@ -14,6 +14,6 @@ const database = MongoAdapter();
   try {
     database.connect();
   } finally {
-    setTimeout(() => server.start(PORT), 1000);
+    server.start(PORT);
   }
 })();

@@ -6,11 +6,13 @@ Descrição breve do projeto.
 
 Para executar o projeto localmente, siga as seguintes instruções:
 
-1. Clone o repositório para sua máquina.
+1. Clone o repositório para sua máquina
 2. Preencha as credencias no arquivo .env
 3. Inicie o projeto com o `make up`
-4. Execute os endpoints localmente conforme a porta indicada no env
-5. Para iniciar a base de dados com o seed use o endpoint POST `/init`
+4. Pra desenvolvimento podes usar o `make up` para subir o banco de dados e acessar normalmente do seu
+    ambiente dev (npm install && npm  run dev)
+5. Com o servidor e o banco de dados ativo, execute os endpoints localmente conforme a porta indicada no env
+6. Para iniciar a base de dados com o seed use o endpoint POST `/init`
 
 ## Endpoints
 
@@ -29,4 +31,3 @@ Abaixo está a lista de todos os endpoints disponíveis no projeto:
 
 
 ## How to deploy
-

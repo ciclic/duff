@@ -1,7 +1,13 @@
 import { Beer } from '../../domain/schemas/Beer';
 
+const cache = new Map();
+
 export const findSuitableBeer = async (temperature: number) => {
-  const suitableBeer = await Beer.aggregate([
+  if (cache.has(temperature)) {
+    return cache.get(temperature);
+  }
+
+  const mostSuitableBeer = await Beer.aggregate([
     {
       $project: {
         style: '$style',
@@ -21,5 +27,7 @@ export const findSuitableBeer = async (temperature: number) => {
     },
   ]);
 
-  return suitableBeer;
+  cache.set(temperature, mostSuitableBeer);
+
+  return mostSuitableBeer;
 };
