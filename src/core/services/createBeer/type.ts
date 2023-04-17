@@ -1,0 +1,1 @@
+export type BeerInput = { style: string, minTemperature: number, maxTemperature: number }
